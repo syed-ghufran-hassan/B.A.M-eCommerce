@@ -4,7 +4,7 @@ import "../styles/HomePage.css"
 function HomePage() {
   return (
     <div>
-      
+      <h1>hiii</h1>
     </div>
   )
 }
