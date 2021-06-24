@@ -1,12 +1,98 @@
-.Footer {
-  position: fixed;
-  height: 50px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+.Footer-background {
+  width: 100%;
+  background-color: white;
+  /* position: fixed; */
+  height: 250px;
+  display: flex;
+  justify-content: center;
   margin-bottom: 0px;
-  background-color: black;
+}
+.Footer {
+  /* position: fixed; */
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  background-color: #1D2547;
+  width: 95%;
+  margin-bottom: 0px;
   color: white;
+}
+
+.Links-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.Logo-part {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Logo-part img{
+width: 60px;
+}
+
+.Footer-icons{
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.icon {
+  margin: 5px;
+}
+
+.Quick-links h4{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.Quick-links a {
+  color: lightgray;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.Partners-links h4{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.Partners-links a {
+  color: lightgray;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.Contact-info {
+  width: 200px;
+}
+
+.Contact-info h4{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.Contact-info span {
+  color: lightgray;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.Credentials{
+  font-size: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
