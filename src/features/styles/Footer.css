@@ -1,7 +1,10 @@
 .Footer {
-  bottom: 0;
-  width: 100vw;
-  height: 100px;
+  position: fixed;
+  height: 50px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
   background-color: black;
   color: white;
   display: flex;
