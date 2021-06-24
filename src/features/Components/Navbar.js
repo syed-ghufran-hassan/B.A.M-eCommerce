@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import "../styles/Navbar.css";
-import logo from "../img/logo.jpg";
+import logo from "../img/logo.png";
 import {
   FaFacebook,
   FaInstagramSquare,
@@ -45,18 +45,20 @@ function Navbar() {
         <Link className="icon facebook-icon">
           <FaFacebook />
         </Link>
-        <Link className="icon facebook-icon">
+        <Link className="icon instagram-icon">
           <FaInstagramSquare />
         </Link>
-        <Link className="icon facebook-icon">
+        <Link className="icon youtube-icon">
           <FaYoutube />
         </Link>
-        <Link className="icon facebook-icon">
+        <Link className="icon search-icon">
           <FaSearch />
         </Link>
-        <Link className="icon facebook-icon">
+        <div>
+        <Link className="icon shopping-icon">
           <FaShoppingBag />
         </Link>
+        </div>
       </div>
     </div>
   );
