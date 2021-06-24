@@ -14,7 +14,15 @@ function Navbar() {
   return (
     <div className="NavbarWrapper">
       <div className="Navbar">
-        <img className="logo" src={logo} alt=""></img>
+      <NavLink
+          className="headerLink"
+          activeClassName="is-active"
+          activeStyle={{ color: "hotpink" }}
+          exact="true"
+          to="/"
+        >
+         <img className="logo" src={logo} alt=""></img>
+        </NavLink>
         <NavLink
           className="headerLink"
           activeClassName="is-active"
@@ -54,11 +62,9 @@ function Navbar() {
         <Link className="icon search-icon">
           <FaSearch />
         </Link>
-        <div>
         <Link className="icon shopping-icon">
           <FaShoppingBag />
         </Link>
-        </div>
       </div>
     </div>
   );
