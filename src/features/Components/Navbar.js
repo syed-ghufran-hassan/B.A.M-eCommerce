@@ -54,9 +54,11 @@ function Navbar() {
         <Link className="icon search-icon">
           <FaSearch />
         </Link>
+        <div>
         <Link className="icon shopping-icon">
           <FaShoppingBag />
         </Link>
+        </div>
       </div>
     </div>
   );
