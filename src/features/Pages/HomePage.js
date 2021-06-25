@@ -3,7 +3,7 @@ import "../styles/HomePage.css";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchProducts } from "../../actions/ProductAction";
-import HeroCarousel from "react-hero-carousel";
+import { HeroCarousel } from "react-hero-carousel";
 import hero from "../img/hero.jpg"
 import hero1 from "../img/hero1.jpg"
 import hero2 from "../img/hero2.jpg"
