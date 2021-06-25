@@ -22,6 +22,9 @@ function Shop() {
   const initialState = {};
 
   const [selectedProduct, setSelectedProduct] = useState(initialState);
+  const [selectedFilter, setSelectedFilter] = useState(
+    categoryTypes.WOMENS_CLOTHING
+  );
 
   const handleProductSelected = (product) => {
     setSelectedProduct(product);
@@ -35,14 +38,16 @@ function Shop() {
     if (loading)
       return (
         <div className="Cards-Container">
-          {Array(9).fill().map((item, id) => (
-            <CardSkeleton
-              key={id}
-              product={item}
-              itemIndex={id}
-              onProductSelected={handleProductSelected}
-            />
-          ))}
+          {Array(9)
+            .fill()
+            .map((item, id) => (
+              <CardSkeleton
+                key={id}
+                product={item}
+                itemIndex={id}
+                onProductSelected={handleProductSelected}
+              />
+            ))}
         </div>
       );
     if (hasErrors) return <p>Unable to display product.</p>;
@@ -75,16 +80,28 @@ function Shop() {
           <div className="Categories">
             <h3 className="Category-Title">Filter by Categories</h3>
             <button
-              onClick={() =>
-                dispatch(fetchProducts(categoryTypes.WOMENS_CLOTHING))
+              className={
+                selectedFilter === categoryTypes.WOMENS_CLOTHING
+                  ? "filter-selected "
+                  : null
               }
+              onClick={() => {
+                setSelectedFilter(categoryTypes.WOMENS_CLOTHING);
+                dispatch(fetchProducts(categoryTypes.WOMENS_CLOTHING));
+              }}
             >
               Women Clothing
             </button>
             <button
-              onClick={() =>
-                dispatch(fetchProducts(categoryTypes.MENS_CLOTHING))
+              className={
+                selectedFilter === categoryTypes.MENS_CLOTHING
+                  ? "filter-selected "
+                  : null
               }
+              onClick={() => {
+                setSelectedFilter(categoryTypes.MENS_CLOTHING);
+                dispatch(fetchProducts(categoryTypes.MENS_CLOTHING));
+              }}
             >
               Men Clothing
             </button>

@@ -53,3 +53,7 @@ button {
   margin-bottom: 20px;
   cursor: pointer;
 }
+
+.filter-selected {
+  border: 3px solid slateblue;
+}
