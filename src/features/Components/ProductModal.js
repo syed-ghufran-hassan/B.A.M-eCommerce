@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { useEffect } from "react";
-
 import logo from "../img/logo.png";
 
 function ProductModal(props) {
@@ -23,7 +20,7 @@ function ProductModal(props) {
               <div className="product-left">
                 <div className="product-info">
                   <div className="product-manufacturer">
-                    <img width="80px" src={logo} />
+                    <img alt="logo" width="80px" src={logo} />
                   </div>
                   <div className="product-title">{props.product.title}</div>
                   <div className="product-price">
@@ -38,7 +35,7 @@ function ProductModal(props) {
                   </div>
                 </div>
                 <div className="product-image">
-                  <img src={props.product.image} />
+                  <img alt="product-img" src={props.product.image} />
                 </div>
               </div>
               <div className="product-right">
@@ -48,7 +45,7 @@ function ProductModal(props) {
                 <div className="product-available">
                   In stock.{" "}
                   <span className="product-extended">
-                    <a href="#">Buy Extended Warranty</a>
+                    <a href="#0">Buy Extended Warranty</a>
                   </span>
                 </div>
                 <div className="product-rating">
@@ -95,7 +92,7 @@ function ProductModal(props) {
                 <div className="product-checkout-actions">
                   <a
                     className="add-to-cart"
-                    href="#"
+                    href="#0"
                     onClick={() => console.log("add to cart")}
                   >
                     Add to Cart
