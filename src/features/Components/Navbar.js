@@ -28,35 +28,37 @@ function NavbarFunc() {
           <Nav.Link href="/shop">Shop</Nav.Link>
           <Nav.Link href="/contact">Contact</Nav.Link>
         </Nav>
-        <Nav>
+        <Nav className="Social-links m-2">
+          <Row>
           <Nav.Link
-            className="facebook-icon"
+            className="facebook-icon m-2"
             href="https://www.facebook.com/"
             target="_blank"
           >
             <FaFacebook />
           </Nav.Link>
           <Nav.Link
-            className="instagram-icon"
+            className="instagram-icon m-2"
             href="https://www.instagram.com/"
             target="_blank"
           >
             <FaInstagramSquare />
           </Nav.Link>
           <Nav.Link
-            className="youtube-icon"
-            href="https://www.facebook.com/"
+            className="youtube-icon m-2"
+            href="https://www.youtube.com/"
             target="_blank"
           >
             <FaYoutube />
           </Nav.Link>
           <Nav.Link
-            className="shopping-icon"
+            className="shopping-icon m-2"
             href="https://www.facebook.com/"
             target="_blank"
           >
             <FaShoppingBag />
           </Nav.Link>
+          </Row>
         </Nav>
       </Navbar.Collapse>
       
