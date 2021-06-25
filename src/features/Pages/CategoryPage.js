@@ -11,12 +11,14 @@ function CategoryPage() {
 
   return (
     <div className="Container">
+
       <div className="Products-Title">
         <h1>Our Products</h1>
       </div>
+
       <div className="Categories-Products">
         <div className="Categories">
-          <h3 className="Category-Title">Filter by Categories</h3>
+          <h3 className="Categories-Title">Filter by Categories</h3>
           <button onClick={() => dispatch({ type: "GET_PRODUCTS" })} >Women Clothing</button>
           <button onClick={() => dispatch({ type: "GET_PRODUCTS" })} >Men Clothing</button>
         </div>
@@ -30,6 +32,7 @@ function CategoryPage() {
           ))}
         </div>
       </div>
+      
     </div>
   )
 }
