@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
 // 1st party component
-import Navbar from "./features/Components/Navbar";
+import NavbarFunc from "./features/Components/Navbar";
 import Footer from "./features/Components/Footer";
 
 // pages
@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />
+        <NavbarFunc />
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/about" exact component={About} />

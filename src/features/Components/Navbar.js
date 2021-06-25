@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
 import "../styles/Navbar.css";
 import logo from "../img/logo.svg";
 import {
@@ -8,89 +7,62 @@ import {
   FaYoutube,
   FaShoppingBag,
 } from "react-icons/fa";
+import Navbar from "react-bootstrap/Navbar";
+import Container from 'react-bootstrap/Container'
+import Nav from "react-bootstrap/Nav";
+import Row from 'react-bootstrap/Row'
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function Navbar() {
+function NavbarFunc() {
   return (
-    <div className="NavbarWrapper">
-      <div className="Navbar">
-        <NavLink
-          className="headerLink"
-          activeClassName="is-active"
-          activeStyle={{ color: "hotpink" }}
-          exact
-          to="/"
-        >
-          <img className="logo" src={logo} alt=""></img>
-        </NavLink>
-        <NavLink
-          className="headerLink"
-          activeClassName="is-active"
-          activeStyle={{ color: "hotpink" }}
-          exact
-          to="/"
-        >
-          HOME
-        </NavLink>
-        <NavLink
-          className="headerLink"
-          activeClassName="is-active"
-          activeStyle={{ color: "hotpink" }}
-          exact
-          to="/about"
-        >
-          ABOUT
-        </NavLink>
-        <NavLink
-          className="headerLink"
-          activeClassName="is-active"
-          activeStyle={{ color: "hotpink" }}
-          exact
-          to="/shop"
-        >
-          SHOP
-        </NavLink>
-        <NavLink
-          className="headerLink"
-          activeClassName="is-active"
-          activeStyle={{ color: "hotpink" }}
-          exact
-          to="/contact"
-        >
-          CONTACT
-        </NavLink>
-      </div>
-      <div className="NavbarSocial">
-        <Link
-          to={{ pathname: "https://www.facebook.com/" }}
-          target="_blank"
-          className="icon facebook-icon"
-        >
-          <FaFacebook />
-        </Link>
-        <Link
-          to={{ pathname: "https://www.instagram.com/" }}
-          target="_blank"
-          className="icon instagram-icon"
-        >
-          <FaInstagramSquare />
-        </Link>
-        <Link
-          to={{ pathname: "https://www.youtube.com/" }}
-          target="_blank"
-          className="icon youtube-icon"
-        >
-          <FaYoutube />
-        </Link>
-        <Link
-          to={{ pathname: "https://www.youtube.com/" }}
-          target="_blank"
-          className="icon shopping-icon"
-        >
-          <FaShoppingBag />
-        </Link>
-      </div>
-    </div>
+    <Navbar sticky="top" collapseOnSelect expand="sm" bg="light" variant="light">
+      <Container>
+      <Navbar.Brand href="./">
+        <img className="logo" src={logo} alt=""></img>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link href="./">Home</Nav.Link>
+          <Nav.Link href="/about">About</Nav.Link>
+          <Nav.Link href="/shop">Shop</Nav.Link>
+          <Nav.Link href="/contact">Contact</Nav.Link>
+        </Nav>
+        <Nav>
+          <Nav.Link
+            className="facebook-icon"
+            href="https://www.facebook.com/"
+            target="_blank"
+          >
+            <FaFacebook />
+          </Nav.Link>
+          <Nav.Link
+            className="instagram-icon"
+            href="https://www.instagram.com/"
+            target="_blank"
+          >
+            <FaInstagramSquare />
+          </Nav.Link>
+          <Nav.Link
+            className="youtube-icon"
+            href="https://www.facebook.com/"
+            target="_blank"
+          >
+            <FaYoutube />
+          </Nav.Link>
+          <Nav.Link
+            className="shopping-icon"
+            href="https://www.facebook.com/"
+            target="_blank"
+          >
+            <FaShoppingBag />
+          </Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+      
+      </Container>
+    </Navbar>
   );
 }
 
-export default Navbar;
+export default NavbarFunc;
