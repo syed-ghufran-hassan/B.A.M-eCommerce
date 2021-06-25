@@ -36,18 +36,27 @@ function Navbar() {
           activeClassName="is-active"
           activeStyle={{ color: "hotpink" }}
           exact
-          to="/category"
+          to="/about"
         >
-          CATEGORY
+          ABOUT
         </NavLink>
         <NavLink
           className="headerLink"
           activeClassName="is-active"
           activeStyle={{ color: "hotpink" }}
           exact
-          to="/product"
+          to="/shop"
         >
-          PRODUCT
+          SHOP
+        </NavLink>
+        <NavLink
+          className="headerLink"
+          activeClassName="is-active"
+          activeStyle={{ color: "hotpink" }}
+          exact
+          to="/contact"
+        >
+          CONTACT
         </NavLink>
       </div>
       <div className="NavbarSocial">

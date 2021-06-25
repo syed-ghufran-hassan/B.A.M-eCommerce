@@ -6,8 +6,9 @@ import ProductModal from "../Components/ProductModal";
 import { fetchProducts } from "../../actions/ProductAction";
 import "../styles/CategoryPage.css";
 import * as categoryTypes from "../../types/Category";
+import '../styles/Product.css';
 
-function CategoryPage() {
+function Shop() {
   const loading = useSelector((state) => state.products.loading);
   const hasErrors = useSelector((state) => state.products.hasErrors);
   const data = useSelector((state) => state.products.data);
@@ -84,4 +85,4 @@ function CategoryPage() {
   return renderProducts();
 }
 
-export default CategoryPage;
+export default Shop;
