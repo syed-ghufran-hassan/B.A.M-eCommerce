@@ -1,20 +1,24 @@
 .Footer-background {
   width: 100%;
   background-color: white;
-  /* position: fixed; */
   height: 260px;
   display: flex;
   justify-content: center;
   margin-bottom: 0px;
 }
+
 .Footer {
   /* position: fixed; */
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+
   height: 260px;
   display: flex;
   flex-direction: column;
   background-color: #1D2547;
-  width: 95%;
-  margin-bottom: 0px;
+  width: 100vw;
   color: white;
 }
 
