@@ -1,14 +1,14 @@
 import React from 'react';
 import '../styles/Card.css';
 
-function Cards() {
+function Cards(props) {
   return (
     <div className="Card">
-      <img src="#" alt="any product">
+      <img className="Images-Products" src={props.product.image} alt="any product">
       </img>
-      <h1>Tailored Jeans</h1>
-      <p class="Price">$19.99</p>
-      <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+      <h1>{props.product.title}</h1>
+      <p class="Price">{props.product.price}</p>
+      <p>{props.product.description}</p>
       <p><button>Add to Cart</button></p>
     </div>
   );
