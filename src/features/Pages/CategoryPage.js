@@ -50,14 +50,14 @@ function CategoryPage() {
   const renderProducts = () => {
     return (
       <div className="Container">
-        <div className="Products-Title">
-          <h1>Our Products</h1>
+        <div className="Title-Container">
+          <h1 className="Title">Our Products</h1>
         </div>
         <ProductModal
           product={selectedProduct}
           onProductUnselected={handleProductUnselected}
         />
-        <div className="Categories-Products">
+        <div className="Categories-Products-Container">
           <div className="Categories">
             <h3 className="Category-Title">Filter by Categories</h3>
             <button

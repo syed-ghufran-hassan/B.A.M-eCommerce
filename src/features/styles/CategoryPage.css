@@ -7,22 +7,42 @@
   align-items: center;
 }
 
-.Cards-Container {
-  margin: 2rem;
-  padding: 1rem;
-}
-
-.Categories-Products {
-  width: 100vw;
+.Categories-Products-Container {
+  width: 90vw;
   height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  outline-style: dashed;
 }
+
+.Title-Container {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+}
+
+.Cards-Container {
+  width: 60vw;
+  padding: 1rem;
+  outline-style: dashed;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Title {
+  font-size: 24px;
+}
+
+
 
 .Categories {
   display: flex;
   flex-direction: column;
+  outline-style: dashed;
 }
 
 button {
