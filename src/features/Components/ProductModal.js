@@ -4,15 +4,6 @@ import { useEffect } from "react";
 import logo from "../img/logo.png";
 
 function ProductModal(props) {
-  const [show, setShow] = useState(false);
-  useEffect(() => {
-    if (props.product.id) {
-      setShow(true);
-    } else {
-      setShow(false);
-    }
-  }, [props.product]);
-
   const handleClose = () => {
     props.onProductUnselected();
   };
@@ -20,7 +11,7 @@ function ProductModal(props) {
   return (
     <div
       className="lightbox-blanket"
-      style={{ display: show ? "block" : "none" }}
+      style={{ display: props.product.id ? "block" : "none" }}
     >
       <div className="pop-up-container">
         <div className="pop-up-container-vertical">

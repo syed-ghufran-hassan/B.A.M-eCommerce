@@ -11,16 +11,16 @@ function ProductPage() {
   const hasErrors = useSelector((state) => state.products.hasErrors);
   const data = useSelector((state) => state.products.data);
 
-  const [selectedProduct, setSelectedProduct] = useState({});
+  const initialState = {};
+
+  const [selectedProduct, setSelectedProduct] = useState(initialState);
 
   const handleProductSelected = (product) => {
     setSelectedProduct(product);
-    console.log("product selected");
   };
 
   const handleProductUnselected = () => {
-    setSelectedProduct({});
-    console.log("product unselected");
+    setSelectedProduct(initialState);
   };
 
   // Show loading, error, or success state
