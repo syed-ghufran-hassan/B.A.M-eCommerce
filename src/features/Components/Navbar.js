@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import "../styles/Navbar.css";
-import logo from "../img/logo.png";
+import logo from "../img/logo.svg";
 import {
   FaFacebook,
   FaInstagramSquare,

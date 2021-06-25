@@ -1,4 +1,4 @@
-import logo from "../img/logo.png";
+import logo from "../img/logo.svg";
 
 function ProductModal(props) {
   const handleClose = () => {
