@@ -2,11 +2,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Cards from "./Cards";
+import CardSkeleton from "../Components/CardSkeleton";
 import ProductModal from "../Components/ProductModal";
 import { fetchProducts } from "../../actions/ProductAction";
 import "../styles/CategoryPage.css";
 import * as categoryTypes from "../../types/Category";
-import '../styles/Product.css';
+import "../styles/Product.css";
 
 function Shop() {
   const loading = useSelector((state) => state.products.loading);
@@ -31,7 +32,19 @@ function Shop() {
   };
 
   const renderProductCards = () => {
-    if (loading) return <p>Loading product...</p>;
+    if (loading)
+      return (
+        <div className="Cards-Container">
+          {Array(9).fill().map((item, id) => (
+            <CardSkeleton
+              key={id}
+              product={item}
+              itemIndex={id}
+              onProductSelected={handleProductSelected}
+            />
+          ))}
+        </div>
+      );
     if (hasErrors) return <p>Unable to display product.</p>;
     return (
       <div className="Cards-Container">
