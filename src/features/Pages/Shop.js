@@ -5,7 +5,7 @@ import Cards from "./Cards";
 import CardSkeleton from "../Components/CardSkeleton";
 import ProductModal from "../Components/ProductModal";
 import { fetchProducts } from "../../actions/ProductAction";
-import "../styles/CategoryPage.css";
+import "../styles/Shop.css";
 import * as categoryTypes from "../../types/Category";
 import "../styles/Product.css";
 
