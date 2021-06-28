@@ -30,3 +30,18 @@
   color: white;
   text-decoration: none;
 }
+.Best-container h2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 30px;
+	font-size: 46px;
+}
+
+.Best-men-clothing {
+	margin: 5%;
+}
+
+.Best-women-clothing {
+	margin: 5%;
+}
