@@ -78,33 +78,38 @@ function Shop() {
         />
         <div className="Categories-Products-Container">
           <div className="Categories">
-            <h3 className="Title-Category">Filter by Categories</h3>
-            <button
-              className={
-                selectedFilter === categoryTypes.WOMENS_CLOTHING
-                  ? "filter-selected "
-                  : null
-              }
-              onClick={() => {
-                setSelectedFilter(categoryTypes.WOMENS_CLOTHING);
-                dispatch(fetchProducts(categoryTypes.WOMENS_CLOTHING));
-              }}
-            >
-              Women Clothing
-            </button>
-            <button
-              className={
-                selectedFilter === categoryTypes.MENS_CLOTHING
-                  ? "filter-selected "
-                  : null
-              }
-              onClick={() => {
-                setSelectedFilter(categoryTypes.MENS_CLOTHING);
-                dispatch(fetchProducts(categoryTypes.MENS_CLOTHING));
-              }}
-            >
-              Men Clothing
-            </button>
+            <div className="Title-Category-Container">
+              <h3 className="Title-Category">Filter by Categories</h3>
+            </div>
+            <div className="Button-Container">
+              <button
+                className={
+                  selectedFilter === categoryTypes.WOMENS_CLOTHING
+                    ? "filter-selected "
+                    : null
+                }
+                onClick={() => {
+                  setSelectedFilter(categoryTypes.WOMENS_CLOTHING);
+                  dispatch(fetchProducts(categoryTypes.WOMENS_CLOTHING));
+                }}
+              >
+                Women Clothing
+              </button>
+              <button
+                className={
+                  selectedFilter === categoryTypes.MENS_CLOTHING
+                    ? "filter-selected "
+                    : null
+                }
+                onClick={() => {
+                  setSelectedFilter(categoryTypes.MENS_CLOTHING);
+                  dispatch(fetchProducts(categoryTypes.MENS_CLOTHING));
+                }}
+              >
+                Men Clothing
+              </button>
+            </div>
+
           </div>
           {renderProductCards()}
         </div>
