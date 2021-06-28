@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom"
 import "../styles/Navbar.css";
 import logo from "../img/logo.svg";
 import {
@@ -15,7 +16,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function NavbarFunc() {
   return (
-    <Navbar sticky="top" collapseOnSelect expand="sm" bg="light" variant="light">
+    <Navbar sticky="top" collapseOnSelect expand="lg" bg="light" variant="light">
       <Container>
       <Navbar.Brand href="./">
         <img className="logo" src={logo} alt=""></img>
@@ -23,10 +24,42 @@ function NavbarFunc() {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto is-active">
-          <Nav.Link href="./">Home</Nav.Link>
-          <Nav.Link href="/about">About</Nav.Link>
-          <Nav.Link href="/shop">Shop</Nav.Link>
-          <Nav.Link href="/contact">Contact</Nav.Link>
+          <NavLink
+           className="headerLink"
+           activeClassName="is-active"
+           activeStyle={{ color: "#9F78FF", fontWeight:"bold", textDecoration:"underline"}}
+           exact="true"
+           to="/"
+          >
+            HOME
+          </NavLink>
+          <NavLink
+           className="headerLink"
+           activeClassName="is-active"
+           activeStyle={{ color: "#9F78FF", fontWeight:"bold", textDecoration:"underline"}}
+           exact="true"
+           to="/about"
+          >
+            ABOUT
+          </NavLink>
+          <NavLink
+           className="headerLink"
+           activeClassName="is-active"
+           activeStyle={{ color: "#9F78FF", fontWeight:"bold", textDecoration:"underline"}}
+           exact="true"
+           to="/shop"
+          >
+            SHOP
+          </NavLink>
+          <NavLink
+           className="headerLink"
+           activeClassName="is-active"
+           activeStyle={{ color: "#9F78FF", fontWeight:"bold", textDecoration:"underline"}}
+           exact="true"
+           to="/contact"
+          >
+            CONTACT
+          </NavLink>
         </Nav>
         <Nav className="Social-links m-2">
           <Row>
@@ -35,28 +68,27 @@ function NavbarFunc() {
             href="https://www.facebook.com/"
             target="_blank"
           >
-            <FaFacebook />
+            <FaFacebook size={24} />
           </Nav.Link>
           <Nav.Link
             className="instagram-icon m-2"
             href="https://www.instagram.com/"
             target="_blank"
           >
-            <FaInstagramSquare />
+            <FaInstagramSquare size={24} />
           </Nav.Link>
           <Nav.Link
             className="youtube-icon m-2"
             href="https://www.youtube.com/"
             target="_blank"
           >
-            <FaYoutube />
+            <FaYoutube size={24} />
           </Nav.Link>
           <Nav.Link
             className="shopping-icon m-2"
-            href="https://www.facebook.com/"
-            target="_blank"
+            href="./shop"
           >
-            <FaShoppingBag />
+            <FaShoppingBag size={24} />
           </Nav.Link>
           </Row>
         </Nav>
