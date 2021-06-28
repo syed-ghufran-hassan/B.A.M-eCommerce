@@ -1,34 +1,9 @@
-.Card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: 1rem;
-  padding: 1rem;
-  text-align: center;
-  font-family: arial;
-}
-
-.Price {
-  color: grey;
-  font-size: 22px;
-}
-
-.Card button {
+.btn {
+  background-color: #1d2547;
   border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
 }
 
-.Card button:hover {
-  opacity: 0.7;
-}
-
-.Images-Products {
-  width: 100px;
-  height: auto;
+.Align {
+  display: flex;
+  justify-content: space-between;
 }
