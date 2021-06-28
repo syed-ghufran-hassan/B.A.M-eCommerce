@@ -1,5 +1,6 @@
-import React from 'react';
-import '../styles/Card.css';
+import React from "react";
+import "../styles/Card.css";
+import { Card, Button } from "react-bootstrap";
 
 function Cards(props) {
   const handleOnClickDetails = () => {
@@ -7,14 +8,23 @@ function Cards(props) {
   };
 
   return (
-    <div className="Card">
-      <img className="Images-Products" src={props.product.image} alt="any product">
-      </img>
-      <h1>{props.product.title}</h1>
-      <p className="Price">{props.product.price}</p>
-      <button onClick={handleOnClickDetails}>Details</button>
-      <button>Add to Cart</button>
-    </div>
+    <Card style={{ width: "18rem", padding: "0.5rem" }}>
+      <Card.Img variant="top" src={props.product.image} />
+      <Card.Body
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+      >
+        <Card.Title>{props.product.title.slice(0, 35)}</Card.Title>
+        <Card.Text>{props.product.description.slice(0, 150)}</Card.Text>
+        <div>
+          <Button onClick={handleOnClickDetails}>Details</Button>
+          <Button>Add to Cart</Button>
+        </div>
+      </Card.Body>
+    </Card>
   );
 }
 

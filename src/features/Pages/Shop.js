@@ -70,7 +70,7 @@ function Shop() {
     return (
       <div className="Container">
         <div className="Title-Container">
-          <h1 className="Title">Our Products</h1>
+          <h1 className="Title-Shop">OUR PRODUCTS</h1>
         </div>
         <ProductModal
           product={selectedProduct}
@@ -78,7 +78,7 @@ function Shop() {
         />
         <div className="Categories-Products-Container">
           <div className="Categories">
-            <h3 className="Category-Title">Filter by Categories</h3>
+            <h3 className="Title-Category">Filter by Categories</h3>
             <button
               className={
                 selectedFilter === categoryTypes.WOMENS_CLOTHING
