@@ -33,6 +33,7 @@ function ProductModal(props) {
                   </div>
                   <div className="product-title">{props.product.title}</div>
                   <div className="product-price">
+                    <FaDollarSign className="curency-prise" size={20} />
                     {props.product.price
                       ? props.product.price.toString().split(".")[0]
                       : 0}
@@ -40,7 +41,6 @@ function ProductModal(props) {
                       {props.product.price
                         ? props.product.price.toString().split(".")[1]
                         : 0}
-                        <FaDollarSign className="curency-prise" size={20} />
                     </span>
                   </div>
                 </div>
@@ -55,7 +55,9 @@ function ProductModal(props) {
                 <div className="product-available">
                   In stock.{" "}
                   <span className="product-extended">
-                    <a className="warranty-link" href="#0">Buy Extended Warranty</a>
+                    <a className="warranty-link" href="#0">
+                      Buy Extended Warranty
+                    </a>
                   </span>
                 </div>
               </div>
@@ -91,7 +93,7 @@ function ProductModal(props) {
                 Total Price
                 <div className="product-checkout-total">
                   <i className="FaDollarSign currency-total-icon">
-                  <FaDollarSign size={20} />
+                    <FaDollarSign size={20} />
                   </i>
                   <div className="product-checkout-total-amount">0.00</div>
                 </div>
