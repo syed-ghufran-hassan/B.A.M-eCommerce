@@ -2,7 +2,7 @@
 	top: 50%;
 	transform: translateY(-50%);
 }
-.carousel-item h3{
+.carousel-item h1{
 		font-size: 100px;
 		font-weight: bold;
 		text-shadow: 1px 1px darkgray;
