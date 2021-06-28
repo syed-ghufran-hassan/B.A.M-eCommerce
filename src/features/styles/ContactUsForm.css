@@ -98,7 +98,7 @@ input[type="email"]:focus,
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
-button:hover {
+.submit-btn:hover {
   background: #dd7e2f;
   box-shadow: 0 15px 20px #b8682780;
   color: white;
