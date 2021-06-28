@@ -1,17 +1,19 @@
 import React from 'react'
 import "../styles/PageNotFound.css";
 import { Link } from "react-router-dom";
+import logo from "../img/logo.svg";
 
 function PageNotFound() {
   return (
     <div className="Container">
-        <div className="Title-PageNotFound">404 Page Not Found</div>
-        <p>
-          You can got back to the main page by clicking in the button. Thanks!
-        </p>
-        <Link to={{ pathname: "/" }}>
-          <button className="NotFoundButton">Back to Home</button>
-        </Link>
+      <div className="Title-Container">
+        <h1 className="Title-PageNotFound">404 PAGE NOT FOUND</h1>
+      </div>
+      <div className="PageNotFound-Container">
+          <p className="Description-PageNotFound"> You can got back to the main page by clicking in HOME.</p>
+          <p className="Description-PageNotFound">Thank you very much!</p>
+          <img style={{ width: "150px" }} src={logo}></img>
+      </div>
     </div>
   )
 }
