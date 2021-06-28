@@ -40,7 +40,7 @@
   display: inline-block;
   font-size: 20px;
   margin: 1% 0.5% 0.5% 0.5%;
-  background-color: white;
+  background-color: rgb(211, 37, 37);
   padding: 10px;
   box-sizing: content-box;
 }
@@ -62,6 +62,7 @@
   display: table;
   margin: auto;
   position: static;
+
 }
 
 .pop-up-container-vertical {
@@ -133,6 +134,7 @@
   border-top: 1px solid #ccc;
   position: relative;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .product-manufacturer {
