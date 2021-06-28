@@ -1,10 +1,12 @@
-import React from 'react'
+import React from "react";
+import FormPage from "../Components/ContactUsForm";
+
+import "../styles/ContactUsForm.css";
 
 export default function Contact() {
   return (
     <div>
-      <h1>Here is the beautiful Contact Form of Anastasiia who love cats and forms :P</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, dignissimos cum!</p>
+      <FormPage />
     </div>
-  )
+  );
 }
