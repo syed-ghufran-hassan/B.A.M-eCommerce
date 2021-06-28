@@ -17,6 +17,10 @@
   color: white;
 }
 
+.Title-About {
+  font-size: 24px;
+}
+
 .Description-Container {
   margin: 1rem;
   padding: 2rem;
