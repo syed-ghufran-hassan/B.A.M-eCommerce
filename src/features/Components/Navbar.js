@@ -28,7 +28,7 @@ function NavbarFunc() {
            className="headerLink"
            activeClassName="is-active"
            activeStyle={{ color: "#9F78FF", fontWeight:"bold", textDecoration:"underline"}}
-           exact="true"
+           exact={true}
            to="/"
           >
             HOME
@@ -37,7 +37,7 @@ function NavbarFunc() {
            className="headerLink"
            activeClassName="is-active"
            activeStyle={{ color: "#9F78FF", fontWeight:"bold", textDecoration:"underline"}}
-           exact="true"
+           exact={true}
            to="/about"
           >
             ABOUT
@@ -46,7 +46,7 @@ function NavbarFunc() {
            className="headerLink"
            activeClassName="is-active"
            activeStyle={{ color: "#9F78FF", fontWeight:"bold", textDecoration:"underline"}}
-           exact="true"
+           exact={true}
            to="/shop"
           >
             SHOP
@@ -55,7 +55,7 @@ function NavbarFunc() {
            className="headerLink"
            activeClassName="is-active"
            activeStyle={{ color: "#9F78FF", fontWeight:"bold", textDecoration:"underline"}}
-           exact="true"
+           exact={true}
            to="/contact"
           >
             CONTACT

@@ -1,47 +1,243 @@
-.carousel-caption {
-  top: 50%;
-  transform: translateY(-50%);
+
+.Best-container h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  font-size: 46px;
+  text-align: center;
+	color: #1d2547;
 }
-.carousel-item h1{
-		font-size: 100px;
-		font-weight: bold;
-		text-shadow: 1px 1px darkgray;
+
+.card-deck {
+  text-align: center;
 }
-.carousel-caption .main-btn {
+
+.card-deck .card {
+  min-width: 16rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.Best-men-clothing {
+  margin: 2% 7% 2% 7%;
+}
+
+.Best-women-clothing {
+  margin: 2% 7% 2% 7%;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-text svg {
+  color: #ffa41c;
+}
+
+.full-price {
+  color: #222;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.price-cents {
+  text-decoration: underline;
+  vertical-align: top;
+  padding-left: 3px;
+}
+
+.position-secondary-btn {
+  text-align: center;
+  margin: 30px;
+}
+
+.secondary-btn {
   width: 250px;
   height: 60px;
-	background-color: #9f78ff;
+  background-color: #9f78ff;
   border: none;
   overflow: hidden;
-  background: linear-gradient(to right, #8c6ae4, #8c6ae4 50%, #9f78ff 50%);
+  background: linear-gradient(to right, #9f78ff 50%, #8c6ae4 50%, #8c6ae4);
   background-size: 200% 100%;
   background-position: 100%;
   transition: background-position 275ms ease;
 }
 
-.carousel-caption .main-btn:hover {
-  background-position: 0 100%;
-  text-decoration: none;
-}
-
-.carousel-caption .main-btn a {
+.secondary-btn a {
   font-weight: bold;
   font-size: 20px;
   color: white;
   text-decoration: none;
 }
-.Best-container h2 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 30px;
-	font-size: 46px;
+
+.secondary-btn:hover {
+  background-position: 0 100%;
+  text-decoration: none;
 }
 
-.Best-men-clothing {
-	margin: 5%;
+.General-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 50px;
+  color: #1d2547;
 }
 
-.Best-women-clothing {
-	margin: 5%;
+.general-icons {
+  text-align: center;
+}
+
+.general-icons svg {
+  margin: 10px;
+}
+
+.Delivery,
+.Payment,
+.Moneyback,
+.Customer-Support {
+  width: 300px;
+}
+
+@media (min-width: 1201px) {
+	.carousel-caption {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+  .carousel-item h1 {
+    font-size: 100px;
+    font-weight: bold;
+    text-shadow: 1px 1px darkgray;
+  }
+  .carousel-caption .main-btn {
+    width: 250px;
+    height: 60px;
+    background-color: #9f78ff;
+    border: none;
+    overflow: hidden;
+    background: linear-gradient(to right, #8c6ae4, #8c6ae4 50%, #9f78ff 50%);
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+  }
+
+  .carousel-caption .main-btn:hover {
+    background-position: 0 100%;
+    text-decoration: none;
+  }
+
+  .carousel-caption .main-btn a {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 1200px) {
+	.carousel-caption {
+		top: 45%;
+		transform: translateY(-50%);
+	}
+  .carousel-item h1 {
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 1px 1px darkgray;
+  }
+  .carousel-caption .main-btn {
+    width: 200px;
+    height: 50px;
+    background-color: #9f78ff;
+    border: none;
+    overflow: hidden;
+    background: linear-gradient(to right, #8c6ae4, #8c6ae4 50%, #9f78ff 50%);
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+  }
+
+  .carousel-caption .main-btn:hover {
+    background-position: 0 100%;
+    text-decoration: none;
+  }
+
+  .carousel-caption .main-btn a {
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 800px) {
+	.carousel-caption {
+		top: 42%;
+		transform: translateY(-50%);
+	}
+  .carousel-item h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 1px 1px darkgray;
+  }
+  .carousel-caption .main-btn {
+    width: 140px;
+    height: 50px;
+    background-color: #9f78ff;
+    border: none;
+    overflow: hidden;
+    background: linear-gradient(to right, #8c6ae4, #8c6ae4 50%, #9f78ff 50%);
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+  }
+
+  .carousel-caption .main-btn:hover {
+    background-position: 0 100%;
+    text-decoration: none;
+  }
+
+  .carousel-caption .main-btn a {
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 600px) {
+	.carousel-caption {
+		top: 45%;
+		transform: translateY(-50%);
+	}
+	.carousel-item h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 1px 1px darkgray;
+  }
+  .carousel-caption .main-btn {
+    width: 120px;
+    height: 30px;
+    background-color: #9f78ff;
+    border: none;
+    overflow: hidden;
+    background: linear-gradient(to right, #8c6ae4, #8c6ae4 50%, #9f78ff 50%);
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+  }
+
+  .carousel-caption .main-btn:hover {
+    background-position: 0 100%;
+    text-decoration: none;
+  }
+
+  .carousel-caption .main-btn a {
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+  }
 }
