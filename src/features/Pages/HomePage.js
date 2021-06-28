@@ -106,7 +106,7 @@ function HomePage() {
         <div className="Best-men-clothing">
           <CardDeck>
             <Card>
-              <Card.Img variant="top" src={men1} />
+              <Card.Img variant="top" src={men1} alt="First men product photo" />
               <Card.Body>
                 <Card.Title>Men's Checked Pattern Shirt</Card.Title>
                 <Card.Text>
@@ -124,7 +124,7 @@ function HomePage() {
               </Card.Body>
             </Card>
             <Card>
-              <Card.Img variant="top" src={men2} />
+              <Card.Img variant="top" src={men2} alt="Second men product photo" />
               <Card.Body>
                 <Card.Title>Men's Slim Fit Trousers</Card.Title>
                 <Card.Text>
@@ -142,7 +142,7 @@ function HomePage() {
               </Card.Body>
             </Card>
             <Card>
-              <Card.Img variant="top" src={men3} />
+              <Card.Img variant="top" src={men3} alt="Third men product photo"  />
               <Card.Body>
                 <Card.Title>Men's Casual Jumper</Card.Title>
                 <Card.Text>
@@ -160,7 +160,7 @@ function HomePage() {
               </Card.Body>
             </Card>
             <Card>
-              <Card.Img variant="top" src={men4} />
+              <Card.Img variant="top" src={men4} alt="Fourth men product photo" />
               <Card.Body>
                 <Card.Title>Men's Denim Shirt Jacket</Card.Title>
                 <Card.Text>
@@ -185,7 +185,7 @@ function HomePage() {
         <div className="Best-women-clothing">
           <CardDeck>
             <Card>
-              <Card.Img variant="top" src={women1} />
+              <Card.Img variant="top" src={women1} alt="First women product photo" />
               <Card.Body>
                 <Card.Title>Women's Casual Top Shirt</Card.Title>
                 <Card.Text>
@@ -203,7 +203,7 @@ function HomePage() {
               </Card.Body>
             </Card>
             <Card>
-              <Card.Img variant="top" src={women2} />
+              <Card.Img variant="top" src={women2} alt="Second women product photo" />
               <Card.Body>
                 <Card.Title>Women's Jeans Trousers</Card.Title>
                 <Card.Text>
@@ -221,7 +221,7 @@ function HomePage() {
               </Card.Body>
             </Card>
             <Card>
-              <Card.Img variant="top" src={women3} />
+              <Card.Img variant="top" src={women3} alt="Third women product photo" />
               <Card.Body>
                 <Card.Title>Women's Office Shirt</Card.Title>
                 <Card.Text>
@@ -239,7 +239,7 @@ function HomePage() {
               </Card.Body>
             </Card>
             <Card>
-              <Card.Img variant="top" src={women4} />
+              <Card.Img variant="top" src={women4} alt="Fourth women product photo" />
               <Card.Body>
                 <Card.Title>Women's Black Trousers</Card.Title>
                 <Card.Text>
