@@ -14,12 +14,34 @@
 	color: #1d2547;
 }
 
+.card-deck {
+  text-align: center;
+	display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+	justify-content: center;
+}
+
+.card-deck .card {
+	min-width: 22rem;
+	max-width: 22rem;
+  margin: 10px;
+}
+
 .Best-men-clothing {
   margin: 2% 7% 2% 7%;
 }
 
 .Best-women-clothing {
   margin: 2% 7% 2% 7%;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-text svg {
+  color: #ffa41c;
 }
 
 .full-price {
