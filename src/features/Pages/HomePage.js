@@ -46,7 +46,7 @@ function HomePage() {
       <div className="Carousel">
         <Carousel fade>
           <Carousel.Item interval={3000}>
-            <img className="d-block w-100" src={hero} alt="First slide" />
+            <img className="Carousel-Image" src={hero} alt="First slide" />
             <Carousel.Caption>
               <h1>FASHION</h1>
               <h1>CHANGING</h1>
@@ -59,7 +59,7 @@ function HomePage() {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item interval={3000}>
-            <img className="d-block w-100" src={hero1} alt="Second slide" />
+            <img className="Carousel-Image" src={hero1} alt="Second slide" />
             <Carousel.Caption>
               <h1>FASHION</h1>
               <h1>CHANGING</h1>
@@ -72,7 +72,7 @@ function HomePage() {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item interval={3000}>
-            <img className="d-block w-100" src={hero2} alt="Third slide" />
+            <img className="Carousel-Image" src={hero2} alt="Third slide" />
             <Carousel.Caption>
               <h1>FASHION</h1>
               <h1>CHANGING</h1>
@@ -85,7 +85,7 @@ function HomePage() {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item interval={3000}>
-            <img className="d-block w-100" src={hero3} alt="Third slide" />
+            <img className="Carousel-Image" src={hero3} alt="Third slide" />
             <Carousel.Caption>
               <h1>FASHION</h1>
               <h1>CHANGING</h1>
@@ -289,8 +289,8 @@ function HomePage() {
           </div>
           <div className="Customer-Support">
             <div className="general-icons">
-              <FaUserClock size={70}/>
-              <FaRegCommentDots size={70}/>
+              <FaUserClock size={70} />
+              <FaRegCommentDots size={70} />
             </div>
             <h3>Customer Support Always Available</h3>
           </div>

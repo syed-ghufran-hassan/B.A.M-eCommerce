@@ -1,3 +1,8 @@
+.Carousel-Image {
+  width: 100vw;
+  height: 500px;
+  object-fit: cover;
+}
 
 .Best-container h2 {
   display: flex;
@@ -9,32 +14,12 @@
 	color: #1d2547;
 }
 
-.card-deck {
-  text-align: center;
-}
-
-.card-deck .card {
-  min-width: 16rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 10px;
-}
-
 .Best-men-clothing {
   margin: 2% 7% 2% 7%;
 }
 
 .Best-women-clothing {
   margin: 2% 7% 2% 7%;
-}
-
-.card-body {
-  text-align: center;
-}
-
-.card-text svg {
-  color: #ffa41c;
 }
 
 .full-price {
@@ -108,12 +93,13 @@
 		transform: translateY(-50%);
 	}
   .carousel-item h1 {
-    font-size: 100px;
+    font-weight: bolder;
+    font-size: 50px;
     font-weight: bold;
-    text-shadow: 1px 1px darkgray;
+    /* text-shadow: 1px 1px darkgray; */
   }
   .carousel-caption .main-btn {
-    width: 250px;
+    width: 200px;
     height: 60px;
     background-color: #9f78ff;
     border: none;
@@ -139,17 +125,17 @@
 
 @media (max-width: 1200px) {
 	.carousel-caption {
-		top: 45%;
+		top: 50%;
 		transform: translateY(-50%);
 	}
   .carousel-item h1 {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
     text-shadow: 1px 1px darkgray;
   }
   .carousel-caption .main-btn {
     width: 200px;
-    height: 50px;
+    height: 60px;
     background-color: #9f78ff;
     border: none;
     overflow: hidden;
@@ -166,7 +152,7 @@
 
   .carousel-caption .main-btn a {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 20px;
     color: white;
     text-decoration: none;
   }
@@ -174,70 +160,34 @@
 
 @media (max-width: 800px) {
 	.carousel-caption {
-		top: 42%;
-		transform: translateY(-50%);
+		top: 55%;
 	}
   .carousel-item h1 {
     font-size: 40px;
-    font-weight: bold;
-    text-shadow: 1px 1px darkgray;
   }
   .carousel-caption .main-btn {
-    width: 140px;
-    height: 50px;
-    background-color: #9f78ff;
-    border: none;
-    overflow: hidden;
-    background: linear-gradient(to right, #8c6ae4, #8c6ae4 50%, #9f78ff 50%);
-    background-size: 200% 100%;
-    background-position: 100%;
-    transition: background-position 275ms ease;
-  }
-
-  .carousel-caption .main-btn:hover {
-    background-position: 0 100%;
-    text-decoration: none;
+    width: 200px;
+    height: 60px;
   }
 
   .carousel-caption .main-btn a {
-    font-weight: bold;
-    font-size: 12px;
-    color: white;
-    text-decoration: none;
+    font-size: 20px;
   }
 }
 
 @media (max-width: 600px) {
 	.carousel-caption {
-		top: 45%;
-		transform: translateY(-50%);
+		top: 55%;
 	}
 	.carousel-item h1 {
-    font-size: 30px;
-    font-weight: bold;
-    text-shadow: 1px 1px darkgray;
+    font-size: 40px;
   }
   .carousel-caption .main-btn {
-    width: 120px;
-    height: 30px;
-    background-color: #9f78ff;
-    border: none;
-    overflow: hidden;
-    background: linear-gradient(to right, #8c6ae4, #8c6ae4 50%, #9f78ff 50%);
-    background-size: 200% 100%;
-    background-position: 100%;
-    transition: background-position 275ms ease;
-  }
-
-  .carousel-caption .main-btn:hover {
-    background-position: 0 100%;
-    text-decoration: none;
+    width: 200px;
+    height: 60px;
   }
 
   .carousel-caption .main-btn a {
-    font-weight: bold;
-    font-size: 12px;
-    color: white;
-    text-decoration: none;
+    font-size: 20px;
   }
 }
