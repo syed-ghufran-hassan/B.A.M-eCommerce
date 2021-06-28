@@ -15,6 +15,7 @@ function Cards(props) {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
+          alignItems: "center"
         }}
       >
         <Card.Title>{props.product.title.slice(0, 35)}</Card.Title>
