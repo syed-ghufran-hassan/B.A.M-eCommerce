@@ -1,0 +1,106 @@
+.form-container {
+  margin: 80px auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.form-description {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d2547;
+  color: white;
+  text-transform: uppercase;
+}
+.form-wrap {
+  width: 550px;
+  background: #f3ededf6;
+  border-radius: 50px;
+}
+
+.form-logo {
+  width: 120px;
+  transition: cubic-bezier(0.46, -0.3, 0.49, 1.32) 3s;
+}
+.form-logo:hover {
+  transform: translateY(10%);
+}
+.profile {
+  width: 240px;
+  float: left;
+  text-align: center;
+  padding: 30px;
+}
+form {
+  background: #dd7d2fc2;
+  float: left;
+  width: calc(100% - 240px);
+  padding: 33px;
+  border-radius: 0 45px 45px 0;
+  color: white;
+}
+
+form div {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.profile h2 {
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+  color: #dd7e2f;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  margin: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+.input-message {
+  width: 100%;
+  padding: 10px 15px;
+  border-width: 0;
+  border-radius: 5px;
+  background: rgb(247, 247, 247);
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+.input-message:focus {
+  box-shadow: inset 0 0 0 2px rgba(122, 122, 122, 0.705);
+  border-radius: 10px;
+}
+.submit-btn {
+  text-decoration: none;
+  padding: 10px 0;
+  border-width: 0;
+  display: block;
+  width: 120px;
+  margin: 25px auto 0;
+  background: #6122c7ec;
+  color: #f7f7f7;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+button:hover {
+  background: #dd7e2f;
+  box-shadow: 0 15px 20px #b8682780;
+  color: white;
+  transform: translateY(-7px);
+}
