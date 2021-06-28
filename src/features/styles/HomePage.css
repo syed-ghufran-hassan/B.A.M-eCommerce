@@ -1,7 +1,31 @@
-/* .Carousel img{
-  background: linear-gradient(rgba(0,0,0,0.5));
-	height: 50%;
-	background-position: center;
-	background-repeat: no-repeat;
-	position: relative;
-} */
+.carousel-caption {
+	top: 50%;
+	transform: translateY(-50%);
+}
+.carousel-item h3{
+		font-size: 100px;
+		font-weight: bold;
+		text-shadow: 1px 1px darkgray;
+}
+.carousel-caption button {
+	width: 250px;
+	height: 60px;
+	border: none;
+	overflow: hidden;
+	background: linear-gradient(to right, #8c6ae4, #8c6ae4 50%, #9F78FF 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+	transition: background-position 275ms ease;
+}
+
+.carousel-caption button:hover {
+	background-position: 0 100%;
+	text-decoration: none;
+}
+
+.carousel-caption button a {
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+}
