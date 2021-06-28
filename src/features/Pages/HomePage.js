@@ -31,7 +31,7 @@ function HomePage() {
               <h1>FASHION</h1>
               <h1>CHANGING</h1>
               <h1>ALWAYS</h1>
-              <button>
+              <button className="main-btn">
                 <NavLink className="home-shop" exact="true" to="/shop">
                   SHOP NOW
                 </NavLink>
@@ -44,7 +44,7 @@ function HomePage() {
               <h1>FASHION</h1>
               <h1>CHANGING</h1>
               <h1>ALWAYS</h1>
-              <Button>
+              <Button className="main-btn">
                 <NavLink className="home-shop" exact="true" to="/shop">
                   SHOP NOW
                 </NavLink>
@@ -57,7 +57,7 @@ function HomePage() {
               <h1>FASHION</h1>
               <h1>CHANGING</h1>
               <h1>ALWAYS</h1>
-              <Button>
+              <Button className="main-btn">
                 <NavLink className="home-shop" exact="true" to="/shop">
                   SHOP NOW
                 </NavLink>
@@ -70,7 +70,7 @@ function HomePage() {
               <h1>FASHION</h1>
               <h1>CHANGING</h1>
               <h1>ALWAYS</h1>
-              <Button>
+              <Button className="main-btn">
                 <NavLink className="home-shop" exact="true" to="/shop">
                   SHOP NOW
                 </NavLink>

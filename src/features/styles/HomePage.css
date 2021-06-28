@@ -7,9 +7,10 @@
 		font-weight: bold;
 		text-shadow: 1px 1px darkgray;
 }
-.carousel-caption button {
+.carousel-caption .main-btn {
   width: 250px;
   height: 60px;
+	background-color: #9f78ff;
   border: none;
   overflow: hidden;
   background: linear-gradient(to right, #8c6ae4, #8c6ae4 50%, #9f78ff 50%);
@@ -18,12 +19,12 @@
   transition: background-position 275ms ease;
 }
 
-.carousel-caption button:hover {
+.carousel-caption .main-btn:hover {
   background-position: 0 100%;
   text-decoration: none;
 }
 
-.carousel-caption button a {
+.carousel-caption .main-btn a {
   font-weight: bold;
   font-size: 20px;
   color: white;
