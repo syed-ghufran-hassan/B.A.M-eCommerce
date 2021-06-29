@@ -1,0 +1,20 @@
+:root {
+  --color-primary: #623bc1;
+  --color-primary-tint-purple-0: #9f78ff;
+  --color-primary-tint-purple-1: #8c6ae4;
+  --color-primary-tint-purple-2: #6122c7;
+
+  --color-accent-blue: #1d2547;
+  --color-accent-orange: #dd7e2f;
+  --color-accent-grey: #616875;
+
+  --color-facebook-icon: blue;
+  --color-instagram-icon: purple;
+  --color-youtube-icon: red;
+
+  --color-gray-tint-light-grey: lightgray;
+  --color-grey: darkgray;
+  --color-dark-grey: #222;
+  --color-light: white;
+  --color-black: #070707;
+}
