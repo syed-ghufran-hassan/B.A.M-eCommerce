@@ -16,7 +16,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function NavbarFunc() {
   return (
-    <Navbar sticky="top" collapseOnSelect expand="lg" bg="light" variant="light">
+    <Navbar sticky="top" collapseOnSelect expand="lg" variant="light">
       <Container>
       <Navbar.Brand href="./">
         <img className="logo" src={logo} alt=""></img>

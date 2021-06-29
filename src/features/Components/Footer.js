@@ -22,21 +22,21 @@ function Footer() {
                 target="_blank"
                 className="icon facebook-icon"
               >
-                <FaFacebook />
+                <FaFacebook size={24}/>
               </Link>
               <Link
                 to={{ pathname: "https://www.instagram.com/" }}
                 target="_blank"
                 className="icon instagram-icon"
               >
-                <FaInstagramSquare />
+                <FaInstagramSquare size={24}/>
               </Link>
               <Link
                 to={{ pathname: "https://www.youtube.com/" }}
                 target="_blank"
                 className="icon youtube-icon"
               >
-                <FaYoutube />
+                <FaYoutube size={24}/>
               </Link>
             </div>
           </div>
