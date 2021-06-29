@@ -1,0 +1,27 @@
+.back-to-top .top {
+  position: fixed;
+  cursor: pointer;
+  bottom: 15px;
+  right: 35px;
+  font-size: 25px;
+  color: #ffffff;
+  background-color: #9f78ff;
+  z-index: 4;
+  width: 50px;
+  height: 50px;
+  line-height: 45px;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-to-top .top:hover {
+  color: #ffffff;
+  background: #8c6ae4;
+}
