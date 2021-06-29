@@ -88,7 +88,7 @@ function Shop() {
       <div className="Container">
         <ScrollButton />
         <div className="Title-Container">
-          <h1 className="Title-Shop">OUR PRODUCTS</h1>
+          <h1 className="Title-Shop">our products</h1>
         </div>
         <ProductModal
           product={selectedProduct}

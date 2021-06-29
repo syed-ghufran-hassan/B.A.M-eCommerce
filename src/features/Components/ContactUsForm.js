@@ -34,9 +34,9 @@ function FormPage() {
 
   return (
     <>
-      <header className="form-description">
-        <h1>here you can leave your feedback</h1>
-      </header>
+      <div className="Title-Container">
+          <h1 className="Title-Contact">here you can leave your feedback</h1>
+        </div>
       <div className="form-container">
         <div className="form-wrap">
           <div className="profile">

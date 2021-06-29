@@ -9,7 +9,7 @@ export default function About() {
     <div className="Container">
       <ScrollButton />
       <div className="Title-Container">
-        <h1 className="Title-About">ABOUT BAM CAT STORE</h1>
+        <h1 className="Title-About">about bam cat store</h1>
       </div>
       <div className="About-Container">
         <div className="Description-Container">

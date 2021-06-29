@@ -5,12 +5,16 @@
   margin-bottom: 0px;
   display: flex;
   flex-direction: column;
-  background-color: #1D2547;
   width: 100vw;
-  color: white;
+  background: linear-gradient(
+    90deg,
+    hsla(271, 85%, 23%, 1) 44%,
+    hsla(271, 100%, 14%, 1) 100%
+  );
+  color: var(--color-accent-tint-grey-3);
 }
 
-.Links-wrapper{
+.Links-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -22,7 +26,6 @@
   font-size: 20px;
 }
 
-
 .Logo-part {
   width: 200px;
   display: flex;
@@ -30,11 +33,11 @@
   align-items: center;
 }
 
-.Logo-part img{
-width: 60px;
+.Logo-part img {
+  width: 60px;
 }
 
-.Footer-icons{
+.Footer-icons {
   display: flex;
   flex-direction: row;
 }
@@ -81,9 +84,11 @@ width: 60px;
 
 .Quick-links h4,
 .Partners-links h4,
-.Contact-info h4{
+.Contact-info h4 {
   margin-top: 60px;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px var(--color-accent-tint-grey-4);
 }
 
 .Quick-links a,
@@ -102,7 +107,7 @@ width: 60px;
   color: #9f78ff;
 }
 
-.Credentials{
+.Credentials {
   font-size: 12px;
   display: flex;
   justify-content: center;

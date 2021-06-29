@@ -3,3 +3,35 @@
   margin: 0;
   padding: 0;
 }
+
+.Container {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Title-Container {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    hsla(271, 85%, 23%, 1) 44%,
+    hsla(271, 100%, 14%, 1) 100%
+  );
+  color: var(--color-accent-tint-grey-0);
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px var(--color-accent-tint-grey-4);
+}
+.Title-Shop,
+.Title-About,
+.Title-Cart,
+.Title-PageNotFound,
+.Title-Contact {
+  font-size: 24px;
+}
