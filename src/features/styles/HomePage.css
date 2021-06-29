@@ -1,4 +1,9 @@
 @import url("Colors.css");
+
+.carousel-item h1 {
+  text-shadow: 1px 1px var(--color-accent-orange);
+}
+
 .Carousel-Image {
   width: 100vw;
   height: 500px;
@@ -12,7 +17,8 @@
   margin: 30px;
   font-size: 46px;
   text-align: center;
-  color: #1d2547;
+  color: var(--color-accent-tint-grey-3);
+  
 }
 
 .card-deck {
@@ -29,36 +35,32 @@
   margin: 10px;
 }
 
-.card-deck .card{
+.card-deck .card {
   display: block;
   top: 0px;
   position: relative;
   max-width: 262px;
-  background-color: white;
+  background-color: var(--color-light);
   border-radius: 4px;
   padding: 32px 24px;
   margin: 12px;
   text-decoration: none;
   z-index: 0;
   overflow: hidden;
-  border: 1px solid white;
+  border: 1px solid var(--color-light);
 }
 
-.card-deck .card:hover{
+.card-deck .card:hover {
   transition: all 0.2s ease-out;
   box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
   top: -4px;
 }
 
-
 .card-deck .card:hover:before {
   transform: scale(2.15);
 }
 
-.Best-men-clothing {
-  margin: 2% 7% 2% 7%;
-}
-
+.Best-men-clothing,
 .Best-women-clothing {
   margin: 2% 7% 2% 7%;
 }
@@ -68,7 +70,7 @@
 }
 
 .card-text svg {
-  color: #ffa41c;
+  color: var(--color-accent-tint-orange-0);
 }
 
 .full-price {
@@ -91,10 +93,9 @@
 .secondary-btn {
   width: 250px;
   height: 60px;
-  background-color: #9f78ff;
   border: none;
   overflow: hidden;
-  background: linear-gradient(to right, #9f78ff 50%, #8c6ae4 50%, #8c6ae4);
+  background: linear-gradient(to right, #3c096c, #7b2cbf 50%, #3c096c 50%);
   background-size: 200% 100%;
   background-position: 100%;
   transition: background-position 275ms ease;
@@ -103,7 +104,7 @@
 .secondary-btn a {
   font-weight: bold;
   font-size: 20px;
-  color: white;
+  color: var(--color-light);
   text-decoration: none;
 }
 
@@ -111,16 +112,25 @@
   background-position: 0 100%;
   text-decoration: none;
 }
+.secondary-btn a,
+.main-btn a,
+.Best-container h2 {
+  text-shadow: 1px 1px 2px var(--color-accent-tint-grey-5);
+}
+
+.secondary-btn a:active,
+.main-btn a:active {
+  color: var(--color-accent-tint-orange-1) !important;
+}
 
 .General-info {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin: 150px 50px 150px 50px;
-  color: #1d2547;
+  margin: 150px 50px;
+  color: var(--color-accent-grey);
 }
-
 .general-icons {
   text-align: center;
 }
@@ -145,30 +155,32 @@
     font-weight: bolder;
     font-size: 50px;
     font-weight: bold;
-    /* text-shadow: 1px 1px darkgray; */
   }
   .carousel-caption .main-btn {
     width: 200px;
     height: 60px;
-    background-color: #9f78ff;
     border: none;
     overflow: hidden;
-    background: linear-gradient(to right, #3c096c, #7b2cbf 50%, #9f78ff 50%);
     background-size: 200% 100%;
     background-position: 100%;
+    background: linear-gradient(
+      to right,
+      #7b2cbf,
+      #3c096c 50%,
+      #3c096c 50%
+    );
     transition: background-position 275ms ease;
   }
 
   .carousel-caption .main-btn:hover {
     background-position: 0 100%;
     text-decoration: none;
-    color: var(--color-accent-tint-orange-1);
   }
 
   .carousel-caption .main-btn a {
     font-weight: bold;
     font-size: 20px;
-    color: white;
+    color: var(--color-light);
     text-decoration: none;
   }
 }
@@ -181,15 +193,13 @@
   .carousel-item h1 {
     font-size: 50px;
     font-weight: bold;
-    text-shadow: 1px 1px darkgray;
   }
   .carousel-caption .main-btn {
     width: 200px;
     height: 60px;
-    background-color: #9f78ff;
     border: none;
     overflow: hidden;
-    background: linear-gradient(to right, #8c6ae4, #8c6ae4 50%, #9f78ff 50%);
+    background: linear-gradient(to right, #7b2cbf, #3c096c 50%, #3c096c 50%);
     background-size: 200% 100%;
     background-position: 100%;
     transition: background-position 275ms ease;
@@ -203,7 +213,7 @@
   .carousel-caption .main-btn a {
     font-weight: bold;
     font-size: 20px;
-    color: white;
+    color: var(--color-light);
     text-decoration: none;
   }
 }

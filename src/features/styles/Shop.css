@@ -37,24 +37,30 @@
 .Button-Container {
   display: flex;
   flex-direction: column;
+  padding: 25px;
+  border-right: 2px solid var(--color-accent-tint-grey-1);
 }
 
 button {
   margin: 1rem;
   width: 200px;
   height: 45px;
-  background: #fff;
+  background: var(--color-light);
   border-radius: 5px;
+  border: 3px solid var(--color-accent-tint-grey-1);
   padding: 11px 19px 11px 18px;
-  color: #616875;
+  color: #d823c9;
   line-height: 20px;
-  border: 1px solid #ededed;
   margin-bottom: 20px;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .filter-selected {
-  border: 3px solid slateblue;
+  color: var(--color-accent-tint-orange-1);
+  font-weight: 600;
+  text-shadow: 1px 1px 2px var(--color-accent-tint-grey-3);
+  border: 2px solid var(--color-accent-tint-grey-4);
 }
 
 @media (max-width: 1200px) {

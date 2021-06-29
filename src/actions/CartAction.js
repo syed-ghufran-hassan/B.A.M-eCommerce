@@ -1,40 +1,28 @@
-export const ADD_PRODUCT = "ADD_PRODUCT";
-export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
-export const ADJUST_QTY = "ADJUST_QTY";
-export const LOAD_CURRENT_ITEM = "LOAD_CURRENT_ITEM";
+export const CART_ADD_OR_SUBTRACT_PRODUCT = "CART_ADD_OR_SUBTRACT_PRODUCT";
+export const CART_REMOVE_PRODUCT = "CART_REMOVE_PRODUCT";
+export const CART_CLEAR = "CART_CLEAR";
 
-export const addToCart = (product, quantity) => {
+export const cartAddOrSubtractProduct = (product, quantity) => {
   return {
-    type: ADD_PRODUCT,
+    type: CART_ADD_OR_SUBTRACT_PRODUCT,
     payload: {
       product: product,
-      quantity: quantity
-    }
-  }
-}
+      quantity: quantity,
+    },
+  };
+};
 
-export const removeFromCart = (itemID) => {
+export const cartRemoveProduct = (product) => {
   return {
-    type: REMOVE_PRODUCT,
+    type: CART_REMOVE_PRODUCT,
     payload: {
-      id: itemID,
-    }
-  }
-}
+      product: product,
+    },
+  };
+};
 
-export const adjustQty = (itemID, value) => {
+export const cartClear = () => {
   return {
-    type: ADJUST_QTY,
-    payload: {
-      id: itemID,
-      qty: value
-    }
-  }
-}
-
-export const loadCurrentItem = (item) => {
-  return {
-    type: LOAD_CURRENT_ITEM,
-    payload: item
-  }
-}
+    type: CART_CLEAR,
+  };
+};

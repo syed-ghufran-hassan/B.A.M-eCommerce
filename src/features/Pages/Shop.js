@@ -1,15 +1,15 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import Cards from "./Cards";
+import ProductCard from "../Components/ProductCard";
 import CardSkeleton from "../Components/CardSkeleton";
 import ProductModal from "../Components/ProductModal";
 import { fetchProducts } from "../../actions/ProductAction";
 import "../styles/Shop.css";
 import * as categoryTypes from "../../types/Category";
 import "../styles/Product.css";
-import ScrollButton from "../Components/ScrollButton"
-import {addToCart} from "../../actions/CartAction"
+import ScrollButton from "../Components/ScrollButton";
+import { cartAddOrSubtractProduct } from "../../actions/CartAction";
 
 function Shop() {
   // Here we got two variables, one for loading and another for errors using useSelector from react-redux
@@ -45,9 +45,9 @@ function Shop() {
 
   // handle to add to Cart component to dispatch the product to store
   const handleAddToCart = (product) => {
-    dispatch(addToCart(product,1));
+    dispatch(cartAddOrSubtractProduct(product, 1));
     console.log(product);
-  }
+  };
 
   // We use Skeleton while loading as an effect, if there is a problem it will show error message
   const renderProductCards = () => {
@@ -70,7 +70,7 @@ function Shop() {
     return (
       <div className="Cards-Container">
         {data.map((item, id) => (
-          <Cards
+          <ProductCard
             key={id}
             product={item}
             itemIndex={id}
@@ -127,7 +127,6 @@ function Shop() {
                 Men Clothing
               </button>
             </div>
-
           </div>
           {renderProductCards()}
         </div>
