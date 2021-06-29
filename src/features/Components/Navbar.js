@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 import "../styles/Navbar.css";
 import logo from "../img/logo.svg";
 import {
@@ -84,13 +84,13 @@ function NavbarFunc() {
           >
             <FaYoutube size={24} />
           </Nav.Link>
-          <Nav.Link
+          <Link
             className="shopping-icon m-2"
             exact={true}
             to="/cart"
           >
             <FaShoppingBag size={24} />
-          </Nav.Link>
+          </Link>
           </Row>
         </Nav>
       </Navbar.Collapse>
