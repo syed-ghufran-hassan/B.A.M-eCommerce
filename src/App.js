@@ -12,6 +12,7 @@ import HomePage from "./features/Pages/HomePage";
 import About from "./features/Pages/About";
 import Shop from "./features/Pages/Shop";
 import Contact from "./features/Pages/Contact";
+import Cart from './features/Pages/Cart';
 import PageNotFound from "./features/Pages/PageNotFound";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/about" exact component={About} />
           <Route path="/shop" exact component={Shop} />
           <Route path="/contact" exact component={Contact} />
+          <Route path="/cart" exact component={Cart} />
           <Route path="*" exact component={PageNotFound} />
         </Switch>
         <Footer />

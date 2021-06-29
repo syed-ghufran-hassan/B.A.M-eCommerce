@@ -10,22 +10,29 @@ import * as categoryTypes from "../../types/Category";
 import "../styles/Product.css";
 
 function Shop() {
+  // Here we got two variables, one for loading and another for errors using useSelector from react-redux
   const loading = useSelector((state) => state.products.loading);
   const hasErrors = useSelector((state) => state.products.hasErrors);
+
+  // Here we fetch the data from the API
   const data = useSelector((state) => state.products.data);
   const dispatch = useDispatch();
 
+  // By default we fetch filtering by category the women clothes by default using useDispatch from react-redux. This is important for the filter functionality by category in buttons.
   useEffect(() => {
     dispatch(fetchProducts(categoryTypes.WOMENS_CLOTHING));
   }, [dispatch]);
 
+  // Variables to manage the products in the Page with useState
   const initialState = {};
-
   const [selectedProduct, setSelectedProduct] = useState(initialState);
+
+  // useState for handling filter
   const [selectedFilter, setSelectedFilter] = useState(
     categoryTypes.WOMENS_CLOTHING
   );
 
+  // triggers the Modal option in details button
   const handleProductSelected = (product) => {
     setSelectedProduct(product);
   };
@@ -34,6 +41,12 @@ function Shop() {
     setSelectedProduct(initialState);
   };
 
+  // handle to add to Cart component to dispatch the product to store
+  const handleAddToCart = (product) => {
+    console.log(product);
+  }
+
+  // We use Skeleton while loading as an effect, if there is a problem it will show error message
   const renderProductCards = () => {
     if (loading)
       return (
@@ -58,6 +71,7 @@ function Shop() {
             key={id}
             product={item}
             itemIndex={id}
+            onAddToCart={handleAddToCart}
             onProductSelected={handleProductSelected}
           />
         ))}
@@ -65,7 +79,7 @@ function Shop() {
     );
   };
 
-  // Show loading, error, or success state
+  // After the loading and error check, we will get the success state in RENDER that is the Cards with the products. Buttons with different functions onClick
   const renderProducts = () => {
     return (
       <div className="Container">
