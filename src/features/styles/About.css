@@ -1,19 +1,5 @@
 @import url("Colors.css");
 
-/* .Title-Container {
-  width: 100vw;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var( --color-primary-tint-purple);
-  color: var(--color-accent-tint-grey-2);
-} */
-/* 
-.Title-About {
-  font-size: 24px;
-} */
-
 .About-Container {
   display: flex;
   flex-direction: column;

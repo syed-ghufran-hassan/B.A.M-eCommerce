@@ -1,6 +1,5 @@
 import React from 'react'
 import "../styles/PageNotFound.css";
-import { Link } from "react-router-dom";
 import logo from "../img/logo.svg";
 
 function PageNotFound() {
@@ -12,7 +11,7 @@ function PageNotFound() {
       <div className="PageNotFound-Container">
           <p className="Description-PageNotFound"> You can got back to the main page by clicking in HOME.</p>
           <p className="Description-PageNotFound">Thank you very much!</p>
-          <img style={{ width: "150px" }} src={logo}></img>
+          <img style={{ width: "150px" }} src={logo} alt=""></img>
       </div>
     </div>
   )

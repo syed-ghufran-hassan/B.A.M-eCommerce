@@ -19,6 +19,7 @@ function CartReducer(state = initialState, action) {
           ...state, data: state.data.map(cartItem => {
             if (cartItem.product.id === action.payload.product.id) {
               cartItem.quantity += action.payload.quantity;
+              cartItem.product.price += cartItem.product.price;
             }
             return cartItem;
           })

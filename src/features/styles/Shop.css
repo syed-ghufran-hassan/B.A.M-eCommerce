@@ -19,17 +19,13 @@
   gap: 1rem;
 }
 
-/* .Title-Shop {
-  font-size: 24px;
-} */
-
 .Categories {
   margin: 3rem;
   padding: 1rem;
   height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 
