@@ -8,6 +8,7 @@ import { fetchProducts } from "../../actions/ProductAction";
 import "../styles/Shop.css";
 import * as categoryTypes from "../../types/Category";
 import "../styles/Product.css";
+import ScrollButton from "../Components/ScrollButton"
 
 function Shop() {
   // Here we got two variables, one for loading and another for errors using useSelector from react-redux
@@ -83,6 +84,7 @@ function Shop() {
   const renderProducts = () => {
     return (
       <div className="Container">
+        <ScrollButton />
         <div className="Title-Container">
           <h1 className="Title-Shop">OUR PRODUCTS</h1>
         </div>

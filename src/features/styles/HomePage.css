@@ -90,7 +90,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin: 50px;
+  margin: 150px 50px 150px 50px;
   color: #1d2547;
 }
 

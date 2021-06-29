@@ -6,10 +6,31 @@ import {
   FaShoppingBag,
   FaDollarSign,
 } from "react-icons/fa";
+import React, { useState } from "react";
 
 function ProductModal(props) {
+  const [quantity, setQuantity] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
+  
   const handleClose = () => {
     props.onProductUnselected();
+  };
+
+  const handleIncrementQuantity = () => {
+    const newQuantity = quantity + 1;
+    setQuantity(newQuantity);
+    updateTotalPrice(newQuantity);
+  };
+  const handleDecrementQuantity = () => {
+    const newQuantity = quantity - 1;
+    if (quantity > 0) {
+      setQuantity(newQuantity);
+      updateTotalPrice(newQuantity);
+    }
+  };
+
+  const updateTotalPrice = (totalQuantity) => {
+    setTotalPrice(totalQuantity * props.product.price);
   };
 
   return (
@@ -69,7 +90,10 @@ function ProductModal(props) {
                   Quantity
                 </label>
                 <div className="product-quantity-subtract">
-                  <i className="FaCaretLeft quantity-left-btn">
+                  <i
+                    className="FaCaretLeft quantity-left-btn"
+                    onClick={handleDecrementQuantity}
+                  >
                     <FaCaretLeft size={28} />
                   </i>
                 </div>
@@ -77,12 +101,15 @@ function ProductModal(props) {
                   <input
                     type="text"
                     id="product-quantity-input"
-                    placeholder={0}
-                    defaultValue={0}
+                    onChange={() => {}}
+                    value={quantity}
                   />
                 </div>
                 <div className="product-quantity-add">
-                  <i className="FaCaretRight quantity-right-btn">
+                  <i
+                    className="FaCaretRight quantity-right-btn"
+                    onClick={handleIncrementQuantity}
+                  >
                     <FaCaretRight size={28} />
                   </i>
                 </div>
@@ -95,7 +122,9 @@ function ProductModal(props) {
                   <i className="FaDollarSign currency-total-icon">
                     <FaDollarSign size={20} />
                   </i>
-                  <div className="product-checkout-total-amount">0.00</div>
+                  <div className="product-checkout-total-amount">
+                    {totalPrice}
+                  </div>
                 </div>
               </div>
               <div className="product-checkout-actions">
