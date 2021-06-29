@@ -1,11 +1,4 @@
-.Container {
-  width: 100vw;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+@import url("Colors.css");
 
 .Categories-Products-Container {
   margin: 2rem;
@@ -14,16 +7,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-
-.Title-Container {
-  width: 100vw;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #1D2547;
-  color: white;
 }
 
 .Cards-Container {
@@ -36,9 +19,9 @@
   gap: 1rem;
 }
 
-.Title-Shop {
+/* .Title-Shop {
   font-size: 24px;
-}
+} */
 
 .Categories {
   margin: 3rem;

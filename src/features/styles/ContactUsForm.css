@@ -5,16 +5,6 @@
   justify-content: center;
   height: 100%;
 }
-.form-description {
-  width: 100vw;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #1d2547;
-  color: white;
-  text-transform: uppercase;
-}
 .form-wrap {
   width: 550px;
   background: #f3ededf6;
@@ -111,14 +101,7 @@ input[type="email"]:focus,
     max-width: 550px;
     width: 100%;
   }
-  .form-description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-  }
-
+  
   .profile,
   form {
     float: none;
