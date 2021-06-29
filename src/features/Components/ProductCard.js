@@ -1,32 +1,37 @@
 import React from "react";
-import "../styles/Product.css";
+import "../styles/Card.css";
+import { Card, Button } from "react-bootstrap";
 
 function ProductCard(props) {
-  const handleOnClick = () => {
+  // onClick Modal
+  const handleOnClickDetails = () => {
     props.onProductSelected(props.product);
   };
 
+  // onClick AddToCart
+  const handleOnClickAddToCart = () => {
+    props.onAddToCart(props.product);
+  };
+
   return (
-    <div className="product-details" onClick={handleOnClick}>
-      <div>
-        <div className="product-info">
-          <div className="product-title">{props.product.title}</div>
-          <div className="product-price">
-            {props.product.price
-              ? props.product.price.toString().split(".")[0]
-              : 0}
-            <span className="product-price-cents">
-              {props.product.price
-                ? props.product.price.toString().split(".")[1]
-                : 0}
-            </span>
-          </div>
+    <Card style={{ width: "18rem", padding: "0.5rem" }}>
+      <Card.Img variant="top" src={props.product.image} />
+      <Card.Body
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <Card.Title>{props.product.title.slice(0, 35)}</Card.Title>
+        <Card.Text>{props.product.description.slice(0, 150)}</Card.Text>
+        <div>
+          <Button onClick={handleOnClickDetails}>Details</Button>
+          <Button onClick={handleOnClickAddToCart}>Add to Cart</Button>
         </div>
-        <div className="product-image">
-          <img src={props.product.image} />
-        </div>
-      </div>
-    </div>
+      </Card.Body>
+    </Card>
   );
 }
 

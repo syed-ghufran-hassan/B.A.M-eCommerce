@@ -8,12 +8,24 @@ import {
 } from "react-icons/fa";
 import React, { useState } from "react";
 
+import { useDispatch } from "react-redux";
+import { cartAddOrSubtractProduct } from "../../actions/CartAction";
+
 function ProductModal(props) {
   const [quantity, setQuantity] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
-  
+
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    dispatch(cartAddOrSubtractProduct(props.product, quantity));
+    handleClose();
+  };
+
   const handleClose = () => {
     props.onProductUnselected();
+    setQuantity(0);
+    setTotalPrice(0);
   };
 
   const handleIncrementQuantity = () => {
@@ -30,7 +42,7 @@ function ProductModal(props) {
   };
 
   const updateTotalPrice = (totalQuantity) => {
-    setTotalPrice(totalQuantity * props.product.price);
+    setTotalPrice(Number(totalQuantity * props.product.price).toFixed(2));
   };
 
   return (
@@ -131,7 +143,7 @@ function ProductModal(props) {
                 <a
                   className="add-to-cart modal-link"
                   href="#0"
-                  onClick={() => console.log("add to cart")}
+                  onClick={() => handleAddToCart()}
                 >
                   <FaShoppingBag className="cart-icon" size={30} /> Add to Cart
                 </a>

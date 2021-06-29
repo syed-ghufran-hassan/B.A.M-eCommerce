@@ -7,13 +7,16 @@
   align-items: center;
 }
 
-.Description-Container {
-  width: 70vw;
-  margin: 1rem;
-  padding: 2rem;
-  height: auto;
+.Description-Container,.Image-Container{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: flex;
+  margin: 1rem;
+  width: 70vw;
+  height: auto;
+}
+
+.Description-Container {
+  padding: 2rem;
   justify-content: space-between;
 }
 
@@ -23,13 +26,8 @@
 }
 
 .Image-Container {
-  display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
-  width: 70vw;
-  height: auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   overflow: hidden;
 }
 
