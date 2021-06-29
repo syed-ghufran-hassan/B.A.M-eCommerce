@@ -1,25 +1,18 @@
-.Container {
-  width: 100vw;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+@import url("Colors.css");
 
-.Title-Container {
+/* .Title-Container {
   width: 100vw;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1d2547;
-  color: white;
-}
-
+  background-color: var( --color-primary-tint-purple);
+  color: var(--color-accent-tint-grey-2);
+} */
+/* 
 .Title-About {
   font-size: 24px;
-}
+} */
 
 .About-Container {
   display: flex;
@@ -56,16 +49,15 @@
 
 .About-Image {
   width: 45rem;
-  object-fit: contain;  
+  object-fit: contain;
 }
 
 @media (max-width: 800px) {
   .About-Image {
     width: 25rem;
-    object-fit: contain;  
+    object-fit: contain;
   }
 }
-
 
 @media (max-width: 600px) {
   .Description-Container {
@@ -79,7 +71,6 @@
 @media (max-width: 400px) {
   .About-Image {
     width: 15rem;
-    object-fit: contain;  
+    object-fit: contain;
   }
 }
-

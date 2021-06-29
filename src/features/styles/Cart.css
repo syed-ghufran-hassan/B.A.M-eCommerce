@@ -1,22 +1,14 @@
-.Container {
-  width: 100vw;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-.Title-Container {
+/* .Title-Container {
   width: 100vw;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1d2547;
+  background-color: var(--color-primary-tint-purple-3);
   color: white;
-}
-
+} */
+/* 
 .Title-Cart {
   font-size: 24px;
-}
+} */
