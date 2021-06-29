@@ -1,17 +1,21 @@
-import * as categoryTypes from "../types/Category";
+export const ADD_PRODUCT = "ADD_PRODUCT";
+export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
+export const ADJUST_QTY = "ADJUST_QTY";
+export const LOAD_CURRENT_ITEM = "LOAD_CURRENT_ITEM";
 
-export const addToCart = (itemID) => {
+export const addToCart = (product, quantity) => {
   return {
-    type: categoryTypes.ADD_PRODUCT,
+    type: ADD_PRODUCT,
     payload: {
-      id: itemID,
+      product: product,
+      quantity: quantity
     }
   }
 }
 
 export const removeFromCart = (itemID) => {
   return {
-    type: categoryTypes.REMOVE_PRODUCTS,
+    type: REMOVE_PRODUCT,
     payload: {
       id: itemID,
     }
@@ -20,7 +24,7 @@ export const removeFromCart = (itemID) => {
 
 export const adjustQty = (itemID, value) => {
   return {
-    type: categoryTypes.ADJUST_QTY,
+    type: ADJUST_QTY,
     payload: {
       id: itemID,
       qty: value
@@ -30,7 +34,7 @@ export const adjustQty = (itemID, value) => {
 
 export const loadCurrentItem = (item) => {
   return {
-    type: categoryTypes.LOAD_CURRENT_ITEM,
+    type: LOAD_CURRENT_ITEM,
     payload: item
   }
 }

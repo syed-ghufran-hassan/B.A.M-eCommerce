@@ -9,6 +9,7 @@ import "../styles/Shop.css";
 import * as categoryTypes from "../../types/Category";
 import "../styles/Product.css";
 import ScrollButton from "../Components/ScrollButton"
+import {addToCart} from "../../actions/CartAction"
 
 function Shop() {
   // Here we got two variables, one for loading and another for errors using useSelector from react-redux
@@ -44,6 +45,7 @@ function Shop() {
 
   // handle to add to Cart component to dispatch the product to store
   const handleAddToCart = (product) => {
+    dispatch(addToCart(product,1));
     console.log(product);
   }
 
