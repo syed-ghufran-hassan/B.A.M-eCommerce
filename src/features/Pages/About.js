@@ -2,10 +2,12 @@ import React from 'react';
 import '../styles/About.css';
 import logo from "../img/logo.svg";
 import fashionstore from "../img/fashionstore.jpg";
+import ScrollButton from "../Components/ScrollButton"
 
 export default function About() {
   return (
     <div className="Container">
+      <ScrollButton />
       <div className="Title-Container">
         <h1 className="Title-About">ABOUT BAM CAT STORE</h1>
       </div>

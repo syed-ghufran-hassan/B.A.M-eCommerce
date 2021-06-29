@@ -21,6 +21,7 @@ import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
+import ScrollButton from "../Components/ScrollButton"
 import {
   FaStar,
   FaDollarSign,
@@ -43,6 +44,7 @@ function HomePage() {
 
   return (
     <div className="Page-container">
+      <ScrollButton />
       <div className="Carousel">
         <Carousel fade>
           <Carousel.Item interval={3000}>
