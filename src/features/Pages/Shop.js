@@ -8,6 +8,7 @@ import { fetchProducts } from "../../actions/ProductAction";
 import "../styles/Shop.css";
 import * as categoryTypes from "../../types/Category";
 import "../styles/Product.css";
+import ScrollButton from "../Components/ScrollButton"
 
 function Shop() {
   const loading = useSelector((state) => state.products.loading);
@@ -69,6 +70,7 @@ function Shop() {
   const renderProducts = () => {
     return (
       <div className="Container">
+        <ScrollButton />
         <div className="Title-Container">
           <h1 className="Title-Shop">OUR PRODUCTS</h1>
         </div>
