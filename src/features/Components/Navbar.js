@@ -86,7 +86,8 @@ function NavbarFunc() {
           </Nav.Link>
           <Nav.Link
             className="shopping-icon m-2"
-            href="./shop"
+            exact={true}
+            to="/cart"
           >
             <FaShoppingBag size={24} />
           </Nav.Link>

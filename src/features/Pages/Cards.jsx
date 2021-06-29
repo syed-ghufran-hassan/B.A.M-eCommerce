@@ -3,8 +3,14 @@ import "../styles/Card.css";
 import { Card, Button } from "react-bootstrap";
 
 function Cards(props) {
+  // onClick Modal
   const handleOnClickDetails = () => {
     props.onProductSelected(props.product);
+  };
+
+  // onClick AddToCart
+  const handleOnClickAddToCart = () => {
+    props.onAddToCart(props.product);
   };
 
   return (
@@ -22,7 +28,7 @@ function Cards(props) {
         <Card.Text>{props.product.description.slice(0, 150)}</Card.Text>
         <div>
           <Button onClick={handleOnClickDetails}>Details</Button>
-          <Button>Add to Cart</Button>
+          <Button onClick={handleOnClickAddToCart}>Add to Cart</Button>
         </div>
       </Card.Body>
     </Card>

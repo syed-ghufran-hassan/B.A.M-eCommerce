@@ -3,26 +3,28 @@ import axios from "axios";
 import { baseUrl } from "../env";
 import * as categoryTypes from "../types/Category";
 
-// action
+// We have three actions
 export const GET_PRODUCTS = "GET_PRODUCTS";
 export const GET_PRODUCTS_SUCCESS = "GET_PRODUCTS_SUCCESS";
 export const GET_PRODUCTS_FAILURE = "GET_PRODUCTS_FAILURE";
 
-// action creator
+// we have an action creator to get all the products from API
 export const getProducts = () => ({
   type: GET_PRODUCTS,
 });
 
+// When success we have this function with type and payload
 export const getProductsSuccess = (PRODUCTS) => ({
   type: GET_PRODUCTS_SUCCESS,
   payload: PRODUCTS,
 });
 
+// When failure we have this function to catch errors
 export const getProductsFailure = () => ({
   type: GET_PRODUCTS_FAILURE,
 });
 
-// asynchronous thunk, combining action as one business logic
+// Asynchronous thunk, combining action as one business logic, we use Axios to get the data unfiltered and later we created a filter for the Shop with IF ELSE statements
 export const fetchProducts = (category) => async (dispatch) => {
   dispatch(getProducts());
 
