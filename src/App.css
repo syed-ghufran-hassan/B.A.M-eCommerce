@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap');
 
 /* My Choices are these 2 fonts, use however you like
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Source+Sans+Pro&display=swap');
@@ -9,7 +9,6 @@ font-family: 'Source Sans Pro', sans-serif; */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* font-family: 'Noto Serif SC', serif; */
 }
 
 .Container {

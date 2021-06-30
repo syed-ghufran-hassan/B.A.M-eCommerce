@@ -7,7 +7,7 @@
 }
 .form-wrap {
   width: 550px;
-  background: #f3ededf6;
+  background: var(--color-accent-tint-grey-0);
   border-radius: 50px;
 }
 
@@ -25,12 +25,12 @@
   padding: 30px;
 }
 form {
-  background: #dd7d2fc2;
+  background: var(--color-accent-tint-orange-transparent);
   float: left;
   width: calc(100% - 240px);
   padding: 33px;
   border-radius: 0 45px 45px 0;
-  color: white;
+  color: var(--color-light);
 }
 
 form div {
@@ -42,7 +42,8 @@ form div {
   font-size: 30px;
   font-weight: bold;
   position: relative;
-  color: #dd7e2f;
+  color: var(--color-accent-tint-orange-3);
+  text-shadow: 1px 1px var(--color-accent-tint-grey-4);
 }
 
 label {
@@ -58,7 +59,8 @@ input[type="email"],
   padding: 10px 15px;
   border-width: 0;
   border-radius: 5px;
-  background: rgb(247, 247, 247);
+  background: var(--color-accent-tint-grey-0);
+  color: var(--color-accent-tint-grey-5);
   outline: none;
   cursor: pointer;
 }
@@ -66,31 +68,32 @@ input[type="email"],
 input[type="text"]:focus,
 input[type="email"]:focus,
 .input-message:focus {
-  box-shadow: inset 0 0 0 2px rgba(122, 122, 122, 0.705);
+  box-shadow: inset 0 0 0 2px var(--color-accent-tint-grey-3);
+  color: var(--color-accent-grey);
+  font-weight: 600;
   border-radius: 10px;
 }
 .submit-btn {
-  text-decoration: none;
+  width: 120px;
+  height: 60px;
+  overflow: hidden;
+  background: linear-gradient(to right, #3c096c, #7b2cbf 50%, #3c096c 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
   padding: 10px 0;
   border-width: 0;
-  display: block;
-  width: 120px;
-  margin: 25px auto 0;
-  background: #6122c7ec;
-  color: #f7f7f7;
-  font-size: 14px;
+  color: var(--color-light);
   outline: none;
   cursor: pointer;
   text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 3px;
-  font-weight: 600;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
 }
 .submit-btn:hover {
-  background: #dd7e2f;
-  box-shadow: 0 15px 20px #b8682780;
-  color: white;
-  transform: translateY(-7px);
+  background-position: 0 100%;
+  text-decoration: none;
+  color: var(--color-primary-tint-purple-0);
+}
+.submit-btn:active {
+  color: var(--color-accent-tint-orange-1);
+  font-weight: 600;
 }
