@@ -58,9 +58,6 @@ function Shop() {
             .map((item, id) => (
               <CardSkeleton
                 key={id}
-                product={item}
-                itemIndex={id}
-                onProductSelected={handleProductSelected}
               />
             ))}
         </div>
