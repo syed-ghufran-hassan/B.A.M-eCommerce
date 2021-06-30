@@ -6,8 +6,9 @@
 
 .Carousel-Image {
   width: 100vw;
-  height: 500px;
+  height: 800px;
   object-fit: cover;
+  object-position: top;
 }
 
 .Best-container h2 {
