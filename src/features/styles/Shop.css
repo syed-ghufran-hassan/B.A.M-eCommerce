@@ -35,7 +35,7 @@
   top: -4px;
 }
 
-.Card-img{
+.Card-img {
   height: 560px;
 }
 
@@ -49,9 +49,12 @@
   align-items: center;
 }
 
-.Title-Category {
+.Title-Category,
+.Bag-Title {
   margin-top: 1rem;
   font-size: 32px;
+  text-transform: uppercase;
+  color: var(--color-accent-tint-grey-5);
 }
 
 .Button-Container {
@@ -74,9 +77,14 @@ button {
   margin-bottom: 20px;
   cursor: pointer;
   text-transform: uppercase;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: "Source Sans Pro", sans-serif;
 }
 button:hover {
   color: var(--color-primary-tint-purple-0);
+  font-weight: bold;
+  border: 3px solid var(--color-accent-tint-grey-3);
 }
 
 .filter-selected {
