@@ -40,34 +40,12 @@
 }
 /* ----------------------------------------------------- */
 /* SHOM MEDIA */
-@media (max-width: 1200px) {
-  .Cards-Container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
 @media (max-width: 900px) {
   .Categories-Products-Container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .Button-Container {
-    display: flex;
-    flex-direction: row;
-  }
-  .Categories {
-    margin: 1rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .Cards-Container {
-    grid-template-columns: 1fr;
-  }
-  .Button-Container {
-    display: flex;
-    flex-direction: column;
   }
 }
 

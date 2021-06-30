@@ -18,8 +18,10 @@ function ProductModal(props) {
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
-    dispatch(cartAddOrSubtractProduct(props.product, quantity));
-    handleClose();
+    if(quantity > 0){
+      dispatch(cartAddOrSubtractProduct(props.product, quantity));
+      handleClose();
+    }
   };
 
   const handleClose = () => {

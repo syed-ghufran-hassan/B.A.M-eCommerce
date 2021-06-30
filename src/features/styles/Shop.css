@@ -5,7 +5,7 @@
   width: 100%;
   height: auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -13,10 +13,30 @@
   width: 100%;
   margin: 3rem;
   padding: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Card-Shop {
+  margin: 20px;
+  background-color: var(--color-light);
+  border-radius: 4px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-accent-tint-grey-1-transparent);
+}
+
+.Card-Shop:hover {
+  transition: all 0.2s ease-out;
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+  top: -4px;
+}
+
+.Card-img{
+  height: 560px;
 }
 
 .Categories {
@@ -36,9 +56,9 @@
 
 .Button-Container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 25px;
-  border-right: 2px solid var(--color-accent-tint-grey-1);
+  border-bottom: 2px solid var(--color-accent-tint-grey-1);
 }
 
 button {
@@ -49,47 +69,19 @@ button {
   border-radius: 5px;
   border: 3px solid var(--color-accent-tint-grey-1);
   padding: 11px 19px 11px 18px;
-  color: #d823c9;
+  color: var(--color-accent-tint-grey-4);
   line-height: 20px;
   margin-bottom: 20px;
   cursor: pointer;
   text-transform: uppercase;
+}
+button:hover {
+  color: var(--color-primary-tint-purple-0);
 }
 
 .filter-selected {
   color: var(--color-accent-tint-orange-1);
   font-weight: 600;
   text-shadow: 1px 1px 2px var(--color-accent-tint-grey-3);
-  border: 2px solid var(--color-accent-tint-grey-4);
+  border: 2px solid var(--color-accent-tint-grey-3);
 }
-
-/* @media (max-width: 1200px) {
-  .Cards-Container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 900px) {
-  .Categories-Products-Container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .Button-Container {
-    display: flex;
-    flex-direction: row;
-  }
-  .Categories {
-    margin: 1rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .Cards-Container {
-    grid-template-columns: 1fr;
-  }
-  .Button-Container {
-    display: flex;
-    flex-direction: column;
-  }
-} */

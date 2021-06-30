@@ -14,18 +14,19 @@ function ProductCard(props) {
   };
 
   return (
-    <Card style={{ width: "18rem", padding: "0.5rem" }}>
-      <Card.Img variant="top" src={props.product.image} />
+    <Card className="Card-Shop" style={{ width: "22rem", padding: "0.5rem", }}>
+      <div className="Card-img">
+      <Card.Img  variant="top" src={props.product.image} />
+      </div>
       <Card.Body
         style={{
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          alignItems: "center",
+          alignItems: "center"
         }}
       >
         <Card.Title>{props.product.title.slice(0, 35)}</Card.Title>
-        <Card.Text>{props.product.description.slice(0, 150)}</Card.Text>
         <div>
           <Button onClick={handleOnClickDetails}>Details</Button>
           <Button onClick={handleOnClickAddToCart}>Add to Cart</Button>
