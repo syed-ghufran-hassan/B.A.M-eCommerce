@@ -9,16 +9,22 @@
   transition: background-position 275ms ease;
   text-shadow: 1px 1px 2px var(--color-accent-tint-grey-5) !important;
   text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: "Source Sans Pro", sans-serif;
 }
 .btn:hover {
   background-position: 0 100%;
   text-decoration: none;
+  color: var(--color-primary-tint-purple-0);
 }
 .btn:active {
   color: var(--color-accent-tint-orange-1) !important;
 }
 .btn:focus {
-  border: 2px solid rgb(55, 199, 11);
+  border: 2px solid var(--color-primary-tint-purple-0);
 }
 
 .Align {

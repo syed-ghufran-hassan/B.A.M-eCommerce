@@ -45,7 +45,7 @@ function FormPage() {
           </div>
           <form method="post" action="fakepage.js" onSubmit={onSubmit}>
             <div>
-              <label htmlFor="name">Full Name</label>
+              <label htmlFor="name" className="form-label">Full Name</label>
               <input
                 type="text"
                 name="name"
@@ -54,7 +54,7 @@ function FormPage() {
               />
             </div>
             <div>
-              <label htmlFor="email">E-mail</label>
+              <label htmlFor="email" className="form-label">E-mail</label>
               <input
                 type="email"
                 name="email"

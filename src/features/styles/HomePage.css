@@ -19,7 +19,6 @@
   font-size: 46px;
   text-align: center;
   color: var(--color-accent-tint-grey-3);
-  
 }
 
 .card-deck {
@@ -60,6 +59,7 @@
 .Best-men-clothing,
 .Best-women-clothing {
   margin: 2% 7% 2% 7%;
+
 }
 
 .card-body {
@@ -71,7 +71,7 @@
 }
 
 .full-price {
-  color: #222;
+  color: var(--color-accent-grey);
   font-size: 24px;
   letter-spacing: 1px;
 }

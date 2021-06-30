@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Source+Sans+Pro&display=swap");
 
 /* My Choices are these 2 fonts, use however you like
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Source+Sans+Pro&display=swap');
+
 font-family: 'Crimson Text', serif;
 font-family: 'Source Sans Pro', sans-serif; */
 
@@ -9,6 +10,36 @@ font-family: 'Source Sans Pro', sans-serif; */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Crimson Text", serif;
+}
+
+.navbar a,
+.Title-Category,
+.card-titel.h5,
+.Best-container h2,
+.Quick-links h4,
+.Partners-links h4,
+.Contact-info h4,
+.product-title,
+.product-checkout,
+.product-quantity-label {
+  font-family: "Crimson Text", serif;
+}
+
+.secondary-btn a,
+.main-btn a,
+.Links-wrapper p,
+.Links-wrapper a,
+.Contact-info span,
+.Credentials span,
+.Description-About,
+.product-description,
+.product-available,
+.modal-link,
+.profile h2,
+.form-label,
+.submit-btn {
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .Container {
@@ -39,7 +70,7 @@ font-family: 'Source Sans Pro', sans-serif; */
 .Title-About,
 .Title-Cart,
 .Title-PageNotFound,
-.Title-Contact {
+.Title-Contact,.Bag-Title{
   font-size: 24px;
 }
 /* ----------------------------------------------------- */
@@ -138,7 +169,7 @@ font-family: 'Source Sans Pro', sans-serif; */
     height: 60px;
     border: none;
     overflow: hidden;
-    background: linear-gradient(to right,#3c096c ,#7b2cbf  50%, #3c096c 50%);
+    background: linear-gradient(to right, #3c096c, #7b2cbf 50%, #3c096c 50%);
     background-size: 200% 100%;
     background-position: 100%;
     transition: background-position 275ms ease;
@@ -231,7 +262,7 @@ font-family: 'Source Sans Pro', sans-serif; */
     max-width: 550px;
     width: 100%;
   }
-  
+
   .profile,
   form {
     float: none;
