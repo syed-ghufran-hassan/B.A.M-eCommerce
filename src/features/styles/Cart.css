@@ -100,35 +100,3 @@
 .quantity-right-btn-cart:active {
   color: var(--color-accent-tint-orange-1);
 }
-
-@media (max-width: 1201px) {
-  .product-left,
-  .product-right,
-  .product-quantity {
-    text-align: left;
-    display: flex;
-    flex-direction: row;
-  }
-  .quantity-left-btn-cart,
-  .quantity-right-btn-cart {
-    padding: 0px;
-    margin: 0px;
-  }
-  .close-icon {
-    top: 0;
-  }
-}
-
-@media (max-width: 900px) {
-  .Products-Grid {
-    padding: 2em;
-    border-top: 1px solid var(--color-accent-tint-grey-1);
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 2rem;
-  }
-  .Total-Cart {
-    justify-content: center;
-  }
-}

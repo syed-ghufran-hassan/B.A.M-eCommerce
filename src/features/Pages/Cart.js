@@ -28,17 +28,6 @@ export default function Cart() {
             </div>
             <div>
               {item.product.title}
-              {/* <div className="product-price ">
-                <FaDollarSign className="curency-prise" size={20} />
-                {item.product.price
-                  ? item.product.price.toString().split(".")[0]
-                  : 0}
-                <span className="product-price-cents">
-                  {item.product.price
-                    ? item.product.price.toString().split(".")[1]
-                    : 0}
-                </span>
-              </div> */}
             </div>
             <div>
               <div className="product-quantity cart-quantity-check">
@@ -138,8 +127,6 @@ export default function Cart() {
                 .toFixed(2)
             )}
           </p>
-
-
         </div>
         <div className="Checkout-Button-Container">
           <button onClick={() => dispatch(cartClear())}>Clear</button>

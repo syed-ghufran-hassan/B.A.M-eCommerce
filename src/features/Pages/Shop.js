@@ -46,7 +46,6 @@ function Shop() {
   // handle to add to Cart component to dispatch the product to store
   const handleAddToCart = (product) => {
     dispatch(cartAddOrSubtractProduct(product, 1));
-    console.log(product);
   };
 
   // We use Skeleton while loading as an effect, if there is a problem it will show error message

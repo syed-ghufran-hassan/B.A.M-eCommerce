@@ -131,14 +131,6 @@
   padding-bottom: 20px;
 }
 
-/* .product-manufacturer {
-  color: rgb(238, 17, 17);
-  font-size: 70px;
-  font-weight: bold;
-  line-height: 1;
-  margin: -2px;
-} */
-
 .product-title {
   font-size: 26px;
   color: var(--color-accent-tint-grey-4);
