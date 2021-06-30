@@ -13,6 +13,12 @@ font-family: 'Source Sans Pro', sans-serif; */
   font-family: "Crimson Text", serif;
 }
 
+html,body{
+  width: 100%;
+  height: 100%;
+ overflow-x: hidden;
+}
+
 .navbar a,
 .Title-Category,
 .card-titel.h5,
