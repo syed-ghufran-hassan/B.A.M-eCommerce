@@ -26,9 +26,9 @@ export default function Cart() {
             <div>
               <img className="Cart-Image" src={item.product.image} alt=""></img>
             </div>
-            <div>{item.product.title}</div>
-            <div className="Align-Cart-Counters">
-              <div className="product-price ">
+            <div>
+              {item.product.title}
+              {/* <div className="product-price ">
                 <FaDollarSign className="curency-prise" size={20} />
                 {item.product.price
                   ? item.product.price.toString().split(".")[0]
@@ -38,8 +38,9 @@ export default function Cart() {
                     ? item.product.price.toString().split(".")[1]
                     : 0}
                 </span>
-              </div>
-
+              </div> */}
+            </div>
+            <div>
               <div className="product-quantity cart-quantity-check">
                 <label
                   htmlFor="product-quantity-input product-quantity-input"
@@ -62,7 +63,7 @@ export default function Cart() {
                     type="text"
                     id="product-quantity-input"
                     className="cart-quantity-input"
-                    onChange={() => {}}
+                    onChange={() => { }}
                     value={item.quantity}
                   />
                 </div>
@@ -105,12 +106,6 @@ export default function Cart() {
                 <FaWindowClose size={28} />
               </i>
             </div>
-            {/*<div> <button
-                onClick={() => dispatch(cartRemoveProduct(item.product))}
-                className="Count-Buttons close-btn"
-              >
-                X
-              </button> </div>*/}
           </div>
         ))}
       </div>
@@ -127,41 +122,25 @@ export default function Cart() {
           <h2 className="Bag-Title">Shopping Bag</h2>
         </div>
         {data.size === 0 ? <EmptyCart /> : <FilledCart />}
+        <div className="Total-Cart">
+          <p className="Total-Text"> Total :</p>
+          <i className="FaDollarSign currency-total-icon">
+            <FaDollarSign size={28} />
+          </i>
+          <p className="Total-Cart-Amount">
+            {Number(
+              data
+                .reduce(
+                  (acc, current) =>
+                    (acc += current.product.price * current.quantity),
+                  0
+                )
+                .toFixed(2)
+            )}
+          </p>
 
-        <div className="product-bottom">
-          <div className="product-checkout cart-total-sum">
-            Total sum:
-            <div className="product-checkout-total cart-checkout-total">
-              <i className="FaDollarSign currency-total-icon">
-                <FaDollarSign size={28} />
-              </i>
-              <div className="product-checkout-total-amount cart-checkout-total-amount">
-                {Number(
-                  data
-                    .reduce(
-                      (acc, current) =>
-                        (acc += current.product.price * current.quantity),
-                      0
-                    )
-                    .toFixed(2)
-                )}
-              </div>
-            </div>
-          </div>
+
         </div>
-
-        {/* <div className="product-checkout">
-          Total sum: $
-          {Number(
-            data
-              .reduce(
-                (acc, current) =>
-                  (acc += current.product.price * current.quantity),
-                0
-              )
-              .toFixed(2)
-          )}
-        </div> */}
         <div className="Checkout-Button-Container">
           <button onClick={() => dispatch(cartClear())}>Clear</button>
           <button>Checkout</button>
