@@ -58,7 +58,7 @@
   align-items: center;
   border-radius: 30px;
   overflow: hidden;
-  background: linear-gradient(to right, #7b2cbf, #3c096c 50%, #3c096c 50%);
+  background: linear-gradient(to right,#3c096c ,#7b2cbf  50%, #3c096c 50%);
   background-size: 200% 100%;
   background-position: 100%;
   transition: background-position 275ms ease;
