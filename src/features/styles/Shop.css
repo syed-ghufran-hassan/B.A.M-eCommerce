@@ -49,47 +49,19 @@ button {
   border-radius: 5px;
   border: 3px solid var(--color-accent-tint-grey-1);
   padding: 11px 19px 11px 18px;
-  color: #d823c9;
+  color: var(--color-accent-tint-grey-4);
   line-height: 20px;
   margin-bottom: 20px;
   cursor: pointer;
   text-transform: uppercase;
+}
+button:hover {
+  color: var(--color-primary-tint-purple-0);
 }
 
 .filter-selected {
   color: var(--color-accent-tint-orange-1);
   font-weight: 600;
   text-shadow: 1px 1px 2px var(--color-accent-tint-grey-3);
-  border: 2px solid var(--color-accent-tint-grey-4);
+  border: 2px solid var(--color-accent-tint-grey-3);
 }
-
-/* @media (max-width: 1200px) {
-  .Cards-Container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 900px) {
-  .Categories-Products-Container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .Button-Container {
-    display: flex;
-    flex-direction: row;
-  }
-  .Categories {
-    margin: 1rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .Cards-Container {
-    grid-template-columns: 1fr;
-  }
-  .Button-Container {
-    display: flex;
-    flex-direction: column;
-  }
-} */
