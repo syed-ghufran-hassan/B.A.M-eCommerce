@@ -13,10 +13,10 @@ font-family: 'Source Sans Pro', sans-serif; */
   font-family: "Crimson Text", serif;
 }
 
-html,body{
+html,
+body {
   width: 100%;
-  height: 100%;
- overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .navbar a,
@@ -76,7 +76,8 @@ html,body{
 .Title-About,
 .Title-Cart,
 .Title-PageNotFound,
-.Title-Contact,.Bag-Title{
+.Title-Contact,
+.Bag-Title {
   font-size: 24px;
 }
 /* ----------------------------------------------------- */
