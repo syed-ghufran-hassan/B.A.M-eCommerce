@@ -36,7 +36,7 @@
   object-fit: contain;
 }
 
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
   .About-Image {
     width: 25rem;
     object-fit: contain;
@@ -57,4 +57,4 @@
     width: 15rem;
     object-fit: contain;
   }
-}
+} */
