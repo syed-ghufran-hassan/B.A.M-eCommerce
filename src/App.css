@@ -139,14 +139,9 @@ font-family: 'Source Sans Pro', sans-serif; */
     height: 60px;
     border: none;
     overflow: hidden;
+    background: linear-gradient(to right,#3c096c ,#7b2cbf  50%, #3c096c 50%);
     background-size: 200% 100%;
     background-position: 100%;
-    background: linear-gradient(
-      to right,
-      #7b2cbf,
-      #3c096c 50%,
-      #3c096c 50%
-    );
     transition: background-position 275ms ease;
   }
 
