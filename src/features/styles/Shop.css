@@ -63,7 +63,7 @@ button {
   border: 2px solid var(--color-accent-tint-grey-4);
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .Cards-Container {
     grid-template-columns: 1fr 1fr;
   }
@@ -92,4 +92,4 @@ button {
     display: flex;
     flex-direction: column;
   }
-}
+} */
