@@ -1,6 +1,7 @@
 .back-to-top .top {
   position: fixed;
   cursor: pointer;
+  z-index: 1;
   bottom: 15px;
   right: 35px;
   font-size: 25px;

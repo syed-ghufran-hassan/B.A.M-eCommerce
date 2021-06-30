@@ -14,7 +14,7 @@ function ProductCard(props) {
   };
 
   return (
-    <Card style={{ width: "18rem", padding: "0.5rem" }}>
+    <Card className="Card-Shop" style={{ width: "22rem", padding: "0.5rem" }}>
       <Card.Img variant="top" src={props.product.image} />
       <Card.Body
         style={{

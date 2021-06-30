@@ -42,7 +42,7 @@
 /* SHOM MEDIA */
 @media (max-width: 1200px) {
   .Cards-Container {
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
   }
 }
 
