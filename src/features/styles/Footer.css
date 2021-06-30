@@ -89,12 +89,13 @@
   margin-bottom: 20px;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px var(--color-accent-tint-grey-4);
+  color: var(--color-accent-tint-grey-1);
 }
 
 .Quick-links a,
 .Partners-links a,
 .Contact-info span {
-  color: lightgray;
+  color: var(--color-accent-tint-grey-1);
   font-size: 16px;
   display: flex;
   flex-direction: column;
@@ -104,7 +105,13 @@
 
 .Quick-links a:hover,
 .Partners-links a:hover {
-  color: #9f78ff;
+  color: var(--color-primary-tint-purple-0);
+}
+
+.Quick-links a:active,
+.Partners-links a:active {
+  color: var(--color-accent-tint-orange-1);
+  font-weight: 600;
 }
 
 .Credentials {

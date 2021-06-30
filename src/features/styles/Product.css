@@ -1,10 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins);
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-
 * {
   box-sizing: border-box;
-  font-family: Montserrat;
-  font-size: 14px;
+
 }
 
 ::selection {
@@ -62,7 +58,6 @@
   display: table;
   margin: auto;
   position: static;
-
 }
 
 .pop-up-container-vertical {
@@ -72,8 +67,6 @@
 }
 
 .pop-up-wrapper {
-  -webkit-box-shadow: -45px 49px 83px 1px rgba(0, 0, 0, 0.45);
-  -moz-box-shadow: -45px 49px 83px 1px rgba(0, 0, 0, 0.45);
   box-shadow: -45px 49px 83px 1px rgba(0, 0, 0, 0.45);
   display: block;
   margin: 115px auto;
@@ -97,7 +90,7 @@
 .go-back-icon:hover {
   color: #dd7e2f;
 }
-.go-back-icon:active{
+.go-back-icon:active {
   color: aqua;
 }
 
@@ -131,7 +124,7 @@
 }
 
 .product-bottom {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--color-accent-tint-grey-1);
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -159,6 +152,7 @@
 
 .product-price-cents {
   text-decoration: underline;
+  font-size: 14px;
   vertical-align: top;
   padding-left: 3px;
 }
@@ -213,7 +207,6 @@
 }
 .product-quantity-label {
   text-transform: uppercase;
-
 }
 .product-quantity * {
   display: inline-block;
@@ -234,6 +227,12 @@
   color: #6122c7ec;
   cursor: pointer;
 }
+
+.quantity-left-btn:active,
+.quantity-right-btn:active {
+  color: var(--color-accent-tint-orange-1);
+}
+
 .quantity-left-btn {
   margin-right: 20px;
 }
@@ -257,10 +256,11 @@
     width: 39%;
     vertical-align: top;
   }
-  .product-quantity{
+  .product-quantity {
     text-align: left;
   }
-  .quantity-left-btn,.quantity-right-btn{
+  .quantity-left-btn,
+  .quantity-right-btn {
     padding: 7px;
     margin: 5px;
   }

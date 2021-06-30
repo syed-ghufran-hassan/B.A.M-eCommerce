@@ -1,5 +1,5 @@
 .Products-Container {
-  width: 70vw;
+  width: 90vw;
   margin: 1rem;
   padding: 2rem;
   height: auto;
@@ -8,37 +8,88 @@
 
 .Products-Grid {
   padding: 2em;
-  border-top: 1px solid black;
+  border-top: 1px solid var(--color-accent-tint-grey-1);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
   gap: 2rem;
+  position: relative;
 }
 
 .Cart-Image {
-  width: 50px;
+  width: 102px;
 }
 
 .Checkout-Button-Container {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
-  border-top: 1px solid black;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.cart-total-sum {
+  left: 79%;
+  top: 100%;
 }
 
 .Bag-Title {
   margin: 2rem 0;
+  text-align: center;
 }
 
-.Count-Buttons {
-  display: flex;
-  justify-content: center;
+.cart-quantity-check {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: right;
+}
+.cart-checkout-total {
+  display: inline-block;
+}
+
+.cart-checkout-total-amount,
+.cart-checkout-total,
+.currency-total-icon {
+  font-size: 33px;
+}
+
+.close-icon {
+  position: absolute;
+  top: 5%;
+  left: 90%;
   align-items: center;
   width: 16px;
   height: 8px;
   cursor: pointer;
+  align-items: center;
+  color: var(--color-accent-tint-grey-4);
+}
+.close-icon:hover {
+  color: var(--color-primary-tint-purple-0);
+}
+.close-icon:active {
+  color: var(--color-accent-tint-orange-1);
+}
+
+.cart-quantity-label {
+  font-size: 12px;
+}
+.cart-quantity-check {
+  display: inline-block;
+  text-align: center;
+}
+
+.quantity-left-btn-cart,
+.quantity-right-btn-cart {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #6122c7ec;
+  cursor: pointer;
+}
+
+.quantity-left-btn-cart:active,
+.quantity-right-btn-cart:active {
+  color: var(--color-accent-tint-orange-1);
 }
 
 .Align-Cart-Counters {
@@ -51,4 +102,25 @@
 .Cart-Buttons {
   display: flex;
   flex-direction: row;
+}
+
+@media (max-width: 1201px) {
+  .product-left,
+  .product-right,
+  .product-bottom {
+    width: 100%;
+  }
+  .product-quantity {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+  }
+  .quantity-left-btn-cart,
+  .quantity-right-btn-cart {
+    padding: 0px;
+    margin: 0px;
+  }
+  .close-icon{
+    top: 0;
+  }
 }
