@@ -15,7 +15,7 @@ export default function Cart() {
   const dispatch = useDispatch();
 
   const EmptyCart = () => {
-    return <h2>Your cart is empty right now</h2>;
+    return <h2 className="Cart-Empty-Title">Your cart is empty right now</h2>;
   };
 
   const FilledCart = () => {
@@ -110,7 +110,7 @@ export default function Cart() {
         <div>
           <h2 className="Bag-Title">Shopping Bag</h2>
         </div>
-        {data.size === 0 ? <EmptyCart /> : <FilledCart />}
+        {data.length === 0 ? <EmptyCart /> : <FilledCart />}
         <div className="Total-Cart">
           <p className="Total-Text"> Total :</p>
           <i className="FaDollarSign currency-total-icon">

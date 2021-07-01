@@ -47,6 +47,11 @@
   text-align: center;
 }
 
+.Cart-Empty-Title {
+  padding-top: 3rem;
+  text-align: center;
+}
+
 .Total-Text {
   margin-top: 2rem;
   margin-right: 1rem;
