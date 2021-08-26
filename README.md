@@ -3,6 +3,7 @@ A project request from *DCI* to complete at the end of *SPA-Module* after learni
 
 The outcome was created from a group project and the collaborators are included in this repository.
 
+
 ## WHAT IS BAM-CAT? AND WHO ARE THE TEAM MEMBERS?
 
 We are 3 students from the DCI web-development department. **"BAM"** - Is the combination of the our names first letters. And **"Cat"** - simply because we love cats. Please feel free to checkout our accounts by following the links below: 
@@ -20,14 +21,15 @@ We are 3 students from the DCI web-development department. **"BAM"** - Is the co
 
 ## WHAT HAVE WE USED?
 
-- React / Redux;
-- React Transition;
-- React Devtools Extension;
-- React DOM / React DOM Router;
-- Axios;
-- Bootstrap;
-- Loading Skeleton;
-- Web API (https://fakestoreapi.com/).
+- React / Redux
+- React Transition
+- React Devtools Extension
+- React DOM / React DOM Router
+- Axios
+- Bootstrap 4
+- Loading Skeleton
+- Web API (https://fakestoreapi.com/)
+- React gh pages (https://github.com/gitname/react-gh-pages)
 
 ## SHORT PREVIEW
 
