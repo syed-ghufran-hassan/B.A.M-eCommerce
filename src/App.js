@@ -18,14 +18,14 @@ import PageNotFound from "./features/Pages/PageNotFound";
 function App() {
   return (
     <div className="App">
-      <Router basename="/B.A.M-eCommerce">
+      <Router>
         <NavbarFunc />
         <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/about" exact component={About} />
-          <Route path="/shop" exact component={Shop} />
-          <Route path="/contact" exact component={Contact} />
-          <Route path="/cart" exact component={Cart} />
+          <Route path="/B.A.M-eCommerce/" exact component={HomePage} />
+          <Route path="/B.A.M-eCommerce/about" exact component={About} />
+          <Route path="/B.A.M-eCommerce/shop" exact component={Shop} />
+          <Route path="/B.A.M-eCommerce/contact" exact component={Contact} />
+          <Route path="/B.A.M-eCommerce/cart" exact component={Cart} />
           <Route path="*" exact component={PageNotFound} />
         </Switch>
         <Footer />
