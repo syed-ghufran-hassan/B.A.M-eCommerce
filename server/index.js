@@ -1,6 +1,7 @@
 import express from "express"
 import mongoose from "mongoose";
 import cors from "cors";
+import products from './routes/products.js';
 
 // import dotenv from "dotenv"
 
@@ -16,6 +17,8 @@ app.use(cors());
 app.get("/", (req,res) => {
   res.send("Hello World")
 })
+
+app.use("/products", products);
 
 const CONNECTION_URL = "mongodb+srv://bam_user:bamenter1234@cluster0.ejkoy.mongodb.net/bam-project?retryWrites=true&w=majority"
 
