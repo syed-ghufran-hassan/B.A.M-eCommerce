@@ -1,44 +1,30 @@
 import React, { useState } from "react";
-import { FaUserAlt, FaUnlockAlt, FaLock, FaAt } from "react-icons/fa";
+import { useDispatch } from "react-redux"
+import { FaUserAlt, FaLock, FaAt } from "react-icons/fa";
+import { registerUser , loginUser} from "../../actions/usersAction.js"
 
-function RegistrationForm() {
-  const [email, updateEmail] = useState("");
+function RegistrationForm({ currentId, setCurrentId}) {
   const [mode, updateMode] = useState("");
-  const emailOnChange = (e) => {
-    updateEmail(e.target.value);
-  };
+  const dispatch = useDispatch();
 
-  const onSubmit = (e) => {
+  const onSubmitSignIn = (e) => {
     e.preventDefault();
-
-    // validation (actually not really necessary)
-    if (email) {
-      if (email.includes("@") && email.length > 3 && domainValid(email)) {
-        alert(
-          "Thank you for your message, we will get back to you as soon as possible!"
-        );
-        // TODO call backend rest api
-        // check which mode
-        // login
-        // register
-
-      } else {
-        alert("Data invalid, please check your data");
-      }
-    } else {
-      alert("Full Name, email and message needs to be filled out!");
-    }
-    e.target.reset();
-
+    const { email, password } = e.target.elements
+    dispatch(loginUser({
+      email: email.value,
+      password: password.value
+    }));      
   };
 
-  const domainValid = (email) => {
-    const domain = email.split("@")[1];
-    if (domain.length === 0) {
-      return false;
-    } else {
-      return true;
-    }
+  const onSubmitSignUp = (e) => {
+    e.preventDefault();
+    const { firstName, lastName, email, password } = e.target.elements
+    dispatch(registerUser({
+      firstName: firstName.value,
+      lastName: lastName.value,
+      email: email.value,
+      password: password.value
+    }));
   };
 
   const handleOnSignUpClick = () => {
@@ -58,55 +44,55 @@ function RegistrationForm() {
         <div className={`container-login ${mode}`}>
           <div className="forms-container">
             <div className="signin-signup">
-              <form action="#" className="sign-in-form">
+              <form action="#" className="sign-in-form" onSubmit={onSubmitSignIn}>
                 <h2 className="title-reg">Sign in</h2>
                 <div className="input-field">
                   <FaAt className="regis-icon" size={24} />
-                  <input type="email" placeholder="Email" required onChange={emailOnChange}/>
+                  <input type="email" id="email" placeholder="Email" required />
                 </div>
                 <div className="input-field">
                   <FaLock className="regis-icon" size={24} />
 
-                  <input type="password" placeholder="Password" required />
+                  <input type="password" id="password" placeholder="Password" required />
                 </div>
                 <input
                   type="submit"
                   defaultValue="Login"
                   className="submit-btn"
-                  onSubmit={onSubmit}
                 />
               </form>
-              <form action="#" className="sign-up-form">
+
+              <form action="#" className="sign-up-form" onSubmit={onSubmitSignUp}>
                 <h2 className="title-reg">Sign up</h2>
                 <div className="input-field">
                   <FaUserAlt className="regis-icon" size={24} />
-                  <input type="text" placeholder="First Name" required />
+                  <input type="text" id="firstName" placeholder="First Name" required />
                 </div>
                 <div className="input-field">
                   <FaUserAlt className="regis-icon" size={24} />
-                  <input type="text" placeholder="Last Name" required />
+                  <input type="text" id="lastName" placeholder="Last Name" required />
                 </div>
                 <div className="input-field">
                   <FaAt className="regis-icon" size={24} />
-                  <input type="email" placeholder="Email" required onChange={emailOnChange}/>
+                  <input type="email" id="email" placeholder="Email" required/>
                 </div>
                 <div className="input-field">
                   <FaLock className="regis-icon" size={24} />
-                  <input type="password" placeholder="Password" required />
+                  <input type="password" id="password" placeholder="Password" required />
                 </div>
-                <div className="input-field">
+                {/* <div className="input-field">
                   <FaUnlockAlt className="regis-icon" size={24} />
                   <input
                     type="password"
                     placeholder="Confirm the Password"
                     required
                   />
-                </div>
+                </div> */}
                 <input
                   type="submit"
                   className="submit-btn"
                   defaultValue="Sign up"
-                  onSubmit={onSubmit}
+                 
                 />
               </form>
             </div>

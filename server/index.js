@@ -2,7 +2,7 @@ import express from "express"
 import mongoose from "mongoose";
 import cors from "cors";
 import products from './routes/products.js';
-
+import users from './routes/users.js';
 // import dotenv from "dotenv"
 
 const app = express();
@@ -18,6 +18,7 @@ app.get("/", (req,res) => {
   res.send("Hello World")
 })
 app.use("/products", products);
+app.use("/users", users);
 
 // Function to serve all static files
 // inside public directory.
