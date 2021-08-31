@@ -17,8 +17,12 @@ app.use(cors());
 app.get("/", (req,res) => {
   res.send("Hello World")
 })
-
 app.use("/products", products);
+
+// Function to serve all static files
+// inside public directory.
+app.use(express.static('public'));  
+app.use('/images', express.static('images')); 
 
 const CONNECTION_URL = "mongodb+srv://bam_user:bamenter1234@cluster0.ejkoy.mongodb.net/bam-project?retryWrites=true&w=majority"
 
