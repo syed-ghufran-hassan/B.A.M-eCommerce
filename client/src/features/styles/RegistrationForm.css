@@ -75,12 +75,24 @@ form.sign-in-form {
 }
 .input-field input {
   background: none;
-  outline: none;
+  cursor: pointer;
   border: none;
   line-height: 1;
   font-weight: 600;
   font-size: 1.1rem;
 }
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  color: var(--color-accent-tint-grey-5);
+  font-weight: 600;
+  border: 3px rgb(255, 255, 255) solid;
+  border-top-right-radius: 23px;
+  border-bottom-right-radius: 23px;
+  width: 103%;
+}
+
 .regis-icon {
   margin-top: 13px;
   margin-left: 10px;
@@ -90,7 +102,6 @@ form.sign-in-form {
 .input-field input::placeholder {
   color: #aaa;
   font-weight: 500;
-  outline: none;
   cursor: pointer;
 }
 

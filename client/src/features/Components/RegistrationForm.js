@@ -61,8 +61,8 @@ function RegistrationForm() {
               <form action="#" className="sign-in-form">
                 <h2 className="title-reg">Sign in</h2>
                 <div className="input-field">
-                  <FaUserAlt className="regis-icon" size={24} />
-                  <input type="text" placeholder="Username" required />
+                  <FaAt className="regis-icon" size={24} />
+                  <input type="email" placeholder="Email" required onChange={emailOnChange}/>
                 </div>
                 <div className="input-field">
                   <FaLock className="regis-icon" size={24} />
@@ -80,7 +80,11 @@ function RegistrationForm() {
                 <h2 className="title-reg">Sign up</h2>
                 <div className="input-field">
                   <FaUserAlt className="regis-icon" size={24} />
-                  <input type="text" placeholder="Username" required />
+                  <input type="text" placeholder="First Name" required />
+                </div>
+                <div className="input-field">
+                  <FaUserAlt className="regis-icon" size={24} />
+                  <input type="text" placeholder="Last Name" required />
                 </div>
                 <div className="input-field">
                   <FaAt className="regis-icon" size={24} />
