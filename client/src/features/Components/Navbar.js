@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
 import logo from "../img/logo.svg";
@@ -15,6 +16,17 @@ import Row from "react-bootstrap/Row";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function NavbarFunc() {
+
+  const data = useSelector((state) => state.usersReducer.data);
+
+  const renderLoginOrName = () => {
+    // state loggedIn
+    if (data.token && data.user._id) {
+      return (<div>{data.user.firstName}</div>);
+    }
+    return <div> LOGIN </div>;
+};
+
   return (
     <Navbar sticky="top" collapseOnSelect expand="lg" variant="light">
       <Container>
@@ -87,7 +99,7 @@ function NavbarFunc() {
               exact={true}
               to="/login"
             >
-              LOGIN
+              {renderLoginOrName()}
             </NavLink>
           </Nav>
 
