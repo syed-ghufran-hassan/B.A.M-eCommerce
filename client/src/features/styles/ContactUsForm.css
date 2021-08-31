@@ -67,6 +67,19 @@ form.sign-in-form {
   position: relative;
 }
 
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  /* box-shadow: inset 0 0 0 2px var(--color-accent-tint-grey-3); */
+  color: var(--color-accent-tint-grey-5);
+  font-weight: 600;
+  border: 3px rgb(255, 255, 255) solid;
+  border-top-right-radius: 23px;
+  border-bottom-right-radius: 23px;
+  width: 103%;
+}
+
 .input-field .regis-icon {
   text-align: center;
   line-height: 10px;
