@@ -19,7 +19,7 @@ function sendEmail(contactName, email, message, callback) {
     from: "fbw46-2@coding-school.org",
     to: ["b.brisilda1552@gmail.com", "mlizamaoliger@gmail.com"],
     subject: "Message from your website",
-    text: "\n" + email + "\n" + contactName + "\n" + message,
+    text: "\n" + "Contact Name:  " +  contactName + "\n" + "email:  " + email + "\n" + "Message: " + "\n" + message,
   };
   transporter.sendMail(mailOption, function (error, info) {
     if (error) {
