@@ -13,16 +13,6 @@ export const getAllUser = async (req, res, next) => {
     }
 };
 
-export const getUser = async (req, res, next) => {
-    try {
-        const user = await User.findById(req.params.id);
-        if (!user) throw new createError.NotFound();
-        res.status(200).send(user);
-    } catch (e) {
-        next(e);
-    }
-};
-
 export const loginUser = async (req, res, next) => {
     try {
         const email = req.body.email;
@@ -99,3 +89,36 @@ function loginUserAndCreateToken(user, res){
     //     res.status(500).send("Server Error");
     // }
 }
+
+// Get, Update and Delete individual users of the shop
+export const getUser = async (req, res, next) => {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user) throw new createError.NotFound();
+    res.status(200).send(user);
+  } catch (e) {
+    next(e);
+  }
+};
+
+export const updateUser = async (req, res, next) => {
+  try {
+    const user = await User.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    });
+    if (!user) throw new createError.NotFound();
+    res.status(200).send(user);
+  } catch (e) {
+    next(e);
+  }
+};
+
+export const deleteUser = async (req, res, next) => {
+  try {
+    const user = await User.findByIdAndDelete(req.params.id);
+    if (!user) throw new createError.NotFound();
+    res.status(200).send(user);
+  } catch (e) {
+    next(e);
+  }
+};

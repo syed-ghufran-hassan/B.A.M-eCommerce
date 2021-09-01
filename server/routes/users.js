@@ -8,6 +8,9 @@ import {
     getAllUser,
     registerUser,
     loginUser,
+    updateUser,
+    deleteUser,
+    getUser,
 } from "../controllers/userController.js";
 
 router.route("/").get(getAllUser);
@@ -17,5 +20,11 @@ router.route("/login").post(loginUser);
 router
     .route("/register")
     .post(validateInputs(userValidationRules), registerUser);
+
+router
+    .route("/:id")
+    .get(getUser)
+    .put(updateUser)
+    .delete(deleteUser);
 
 export default router;
