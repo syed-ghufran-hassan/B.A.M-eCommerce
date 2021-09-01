@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import products from './routes/products.js';
 import users from './routes/users.js';
+import contact from './routes/contact.js';
 // import dotenv from "dotenv"
 
 const app = express();
@@ -19,6 +20,7 @@ app.get("/", (req,res) => {
 })
 app.use("/products", products);
 app.use("/users", users);
+app.use("/contact", contact);
 
 // Function to serve all static files
 // inside public directory.
