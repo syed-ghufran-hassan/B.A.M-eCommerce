@@ -1,18 +1,40 @@
 import React from "react";
+import { useState } from "react";
 import "../styles/UserProfile.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch, useSelector } from "react-redux";
 import { FaUserAlt, FaLock, FaAt } from "react-icons/fa";
 import Button from "react-bootstrap/Button";
 import { Link, NavLink } from "react-router-dom";
+import { updateUser,deleteUser } from "../../actions/usersAction.js";
 
 function UserProfile() {
     const data = useSelector((state) => state.usersReducer.data);
+    const dispatch = useDispatch();
 
     const onLogOut = () => {
         localStorage.clear();
         window.location.reload();
     };
+
+    const onUpdateSubmit = (e) => {
+        e.preventDefault();
+        const { firstName, lastName, email, password } = e.target.elements;
+        dispatch(
+            updateUser({
+                _id: data.user._id,
+                firstName: firstName.value,
+                lastName: lastName.value,
+                email: email.value,
+                password: password.value,
+            }),
+        );
+    };
+
+    const onDeleteUserClickHandler = () => {
+        dispatch(deleteUser(data.user));
+    }
+
     return (
         <div className="profile-container">
             <div className="part-one-container">
@@ -30,11 +52,11 @@ function UserProfile() {
                         </NavLink>
                     </Button>
                     <Button className="profile-btn" onClick={onLogOut}>
-                        <Link>SIGN OUT</Link>
+                        <Link to="">SIGN OUT</Link>
                     </Button>
                 </div>
                 <div className="form-container">
-                    <form action="#">
+                    <form action="#" onSubmit={onUpdateSubmit}>
                         <h2>Update my profile</h2>
                         <div className="input-field">
                             <FaUserAlt className="regis-icon" size={24} />
@@ -43,6 +65,7 @@ function UserProfile() {
                                 id="firstName"
                                 placeholder="Update First Name"
                                 required
+                                defaultValue={data.user.firstName}
                             />
                         </div>
                         <div className="input-field">
@@ -52,6 +75,7 @@ function UserProfile() {
                                 id="lastName"
                                 placeholder="Update Last Name"
                                 required
+                                defaultValue={data.user.lastName}
                             />
                         </div>
                         <div className="input-field">
@@ -61,6 +85,7 @@ function UserProfile() {
                                 id="email"
                                 placeholder="Update Email"
                                 required
+                                defaultValue={data.user.email}
                             />
                         </div>
                         <div className="input-field">
@@ -72,18 +97,17 @@ function UserProfile() {
                                 required
                             />
                         </div>
-                        <Button className="profile-btn">
-                            <Link>UPDATE</Link>
+                        <Button type="submit" className="profile-btn">
+                                UPDATE
                         </Button>
                     </form>
                 </div>
-                
             </div>
             <div>
-                <Button className="profile-btn delete-btn">
-                    <Link>Delete my account</Link>
+                <Button className="profile-btn delete-btn" onClick={onDeleteUserClickHandler}>
+                    <Link to="">Delete my account</Link>
                 </Button>
-                </div>
+            </div>
         </div>
     );
 }
