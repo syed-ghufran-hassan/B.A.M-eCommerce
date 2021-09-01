@@ -1,4 +1,4 @@
-.btn {
+.btn-card {
   background: linear-gradient(to right, #3c096c, #7b2cbf 50%, #3c096c 50%);
   width: 200px;
   height: 60px;
@@ -15,15 +15,15 @@
   text-decoration: none;
   font-family: "Source Sans Pro", sans-serif;
 }
-.btn:hover {
+.btn-card:hover {
   background-position: 0 100%;
   text-decoration: none;
   color: var(--color-primary-tint-purple-0);
 }
-.btn:active {
+.btn-card:active {
   color: var(--color-accent-tint-orange-1) !important;
 }
-.btn:focus {
+.btn-card:focus {
   border: 2px solid var(--color-primary-tint-purple-0);
 }
 

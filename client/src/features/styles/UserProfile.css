@@ -1,0 +1,109 @@
+@import url("Colors.css");
+
+.profile-container{
+  height: 700px;
+  width: 100%;
+  background-color: #9F78FF;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23d474b4'/%3E%3Cstop offset='1' stop-color='%23d474b4' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%237855c4'/%3E%3Cstop offset='1' stop-color='%237855c4' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23b94f4c'/%3E%3Cstop offset='1' stop-color='%23b94f4c' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%239F78FF'/%3E%3Cstop offset='1' stop-color='%239F78FF' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FF6F00'/%3E%3Cstop offset='1' stop-color='%23FF6F00' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%233C096C'/%3E%3Cstop offset='1' stop-color='%233C096C' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.part-one-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.profile-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-details h1,
+.profile-details h4,
+.form-container h2 {
+  text-align: center;
+  color: var(--color-accent-tint-grey-3);
+}
+
+.form-container{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-btn {
+  background: linear-gradient(to right, #3c096c, #7b2cbf 50%, #3c096c 50%);
+  width: 200px;
+  height: 60px;
+  overflow: hidden;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+  text-shadow: 1px 1px 2px var(--color-accent-tint-grey-5) !important;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.delete-btn {
+  width: 300px;
+  height: 60px;
+}
+
+.profile-btn a{
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--color-light);
+  text-decoration: none;
+  text-shadow: 1px 1px 2px var(--color-accent-tint-grey-5);
+}
+
+.profile-btn a:active{
+  color: var(--color-accent-tint-orange-1) !important;
+}
+
+.profile-btn:hover{
+  background-position: 0 100%;
+  text-decoration: none;
+  color: var(--color-primary-tint-purple-0);
+}
+
+.profile-btn:active{
+  color: var(--color-accent-tint-orange-1);
+  font-weight: 600;
+  border: none;
+}
+
+.profile-btn:focus{
+  border: 2px solid var(--color-primary-tint-purple-0);
+}
+
+@media (max-width: 870px) {
+  .profile-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .part-one-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-details {
+    margin: 50px;
+  }
+}
