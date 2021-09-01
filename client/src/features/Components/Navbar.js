@@ -24,7 +24,7 @@ function NavbarFunc() {
     if (data.token && data.user._id) {
       return (<div>{data.user.firstName}</div>);
     }
-    return <div> LOGIN </div>;
+    return <div> SIGN IN </div>;
 };
 
   return (
