@@ -28,6 +28,7 @@ function UserProfile() {
                 password: update_password.value,
             }),
         );
+        alert("Customer details updated successfully. Thanks")
     };
 
     const onDeleteUserClickHandler = () => {
