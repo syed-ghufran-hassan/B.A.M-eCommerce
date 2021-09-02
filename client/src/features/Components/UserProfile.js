@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import "../styles/UserProfile.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -19,14 +18,14 @@ function UserProfile() {
 
     const onUpdateSubmit = (e) => {
         e.preventDefault();
-        const { firstName, lastName, email, password } = e.target.elements;
+        const { update_firstName, update_lastName, update_email, update_password } = e.target.elements;
         dispatch(
             updateUser({
                 _id: data.user._id,
-                firstName: firstName.value,
-                lastName: lastName.value,
-                email: email.value,
-                password: password.value,
+                firstName: update_firstName.value,
+                lastName: update_lastName.value,
+                email: update_email.value,
+                password: update_password.value,
             }),
         );
     };
@@ -62,7 +61,7 @@ function UserProfile() {
                             <FaUserAlt className="regis-icon" size={24} />
                             <input
                                 type="text"
-                                id="firstName"
+                                id="update_firstName"
                                 placeholder="Update First Name"
                                 required
                                 defaultValue={data.user.firstName}
@@ -72,7 +71,7 @@ function UserProfile() {
                             <FaUserAlt className="regis-icon" size={24} />
                             <input
                                 type="text"
-                                id="lastName"
+                                id="update_lastName"
                                 placeholder="Update Last Name"
                                 required
                                 defaultValue={data.user.lastName}
@@ -82,7 +81,7 @@ function UserProfile() {
                             <FaAt className="regis-icon" size={24} />
                             <input
                                 type="email"
-                                id="email"
+                                id="update_email"
                                 placeholder="Update Email"
                                 required
                                 defaultValue={data.user.email}
@@ -92,7 +91,7 @@ function UserProfile() {
                             <FaLock className="regis-icon" size={24} />
                             <input
                                 type="password"
-                                id="password"
+                                id="update_password"
                                 placeholder="Update Password"
                                 required
                             />

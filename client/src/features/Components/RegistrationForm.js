@@ -24,12 +24,12 @@ function RegistrationForm({ currentId, setCurrentId}) {
 
   const onSubmitSignUp = (e) => {
     e.preventDefault();
-    const { firstName, lastName, email, password } = e.target.elements
+    const { register_firstName, register_lastName, register_email, register_password } = e.target.elements
     dispatch(registerUser({
-      firstName: firstName.value,
-      lastName: lastName.value,
-      email: email.value,
-      password: password.value
+      firstName: register_firstName.value,
+      lastName: register_lastName.value,
+      email: register_email.value,
+      password: register_password.value
     }));
   };
 
@@ -79,19 +79,19 @@ function RegistrationForm({ currentId, setCurrentId}) {
                 <h2 className="title-reg">Sign up</h2>
                 <div className="input-field">
                   <FaUserAlt className="regis-icon" size={24} />
-                  <input type="text" id="firstName" placeholder="First Name" required />
+                  <input type="text" id="register_firstName" placeholder="First Name" required />
                 </div>
                 <div className="input-field">
                   <FaUserAlt className="regis-icon" size={24} />
-                  <input type="text" id="lastName" placeholder="Last Name" required />
+                  <input type="text" id="register_lastName" placeholder="Last Name" required />
                 </div>
                 <div className="input-field">
                   <FaAt className="regis-icon" size={24} />
-                  <input type="email" id="email" placeholder="Email" required/>
+                  <input type="email" id="register_email" placeholder="Email" required/>
                 </div>
                 <div className="input-field">
                   <FaLock className="regis-icon" size={24} />
-                  <input type="password" id="password" placeholder="Password" required />
+                  <input type="password" id="register_password" placeholder="Password" required />
                 </div>
                 {/* <div className="input-field">
                   <FaUnlockAlt className="regis-icon" size={24} />
