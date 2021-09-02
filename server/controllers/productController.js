@@ -1,30 +1,23 @@
 import Product from "../models/productsSchema.js";
+import createError from "http-errors";
 
-export const getAllProducts = (req, res) => {
-  const limit = Number(req.query.limit) || 0;
-  const sort = req.query.sort == "desc" ? -1 : 1;
-
-  Product.find()
-    .select(["-_id"])
-    .limit(limit)
-    .sort({ id: sort })
-    .then((products) => {
-      res.json(products);
-    })
-    .catch((err) => console.log(err));
+export const getAllProducts = async (req, res, next) => {
+  try {
+    const products = await Product.find();
+    res.status(200).send(products);
+  } catch (e) {
+    next(e);
+  }
 };
 
-export const getProduct = (req, res) => {
-  const id = req.params.id;
-
-  Product.findOne({
-    id,
-  })
-    .select(["-_id"])
-    .then((product) => {
-      res.json(product);
-    })
-    .catch((err) => console.log(err));
+export const getProduct = async (req, res, next) => {
+  try {
+    const product = await Product.findById(req.params.id);
+    if (!product) throw new createError.NotFound();
+    res.status(200).send(product);
+  } catch (e) {
+    next(e);
+  }
 };
 
 export const getProductCategories = (req, res) => {
@@ -43,7 +36,6 @@ export const getProductsInCategory = (req, res) => {
   Product.find({
     category,
   })
-    .select(["-_id"])
     .limit(limit)
     .sort({ id: sort })
     .then((products) => {
@@ -62,38 +54,25 @@ export const addProduct = async (req, res, next) => {
   }
 };
 
-export const editProduct = (req, res) => {
-  if (typeof req.body == undefined || req.params.id == null) {
-    res.json({
-      status: "error",
-      message: "something went wrong! check your sent data",
+export const editProduct = async (req, res, next) => {
+  try {
+    const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
     });
-  } else {
-    res.json({
-      id: req.params.id,
-      title: req.body.title,
-      price: req.body.price,
-      description: req.body.description,
-      image: req.body.image,
-      category: req.body.category,
-    });
+    if (!product) throw new createError.NotFound();
+    res.status(200).send(product);
+  } catch (e) {
+    next(e);
   }
 };
 
-export const deleteProduct = (req, res) => {
-  if (req.params.id == null) {
-    res.json({
-      status: "error",
-      message: "cart id should be provided",
-    });
-  } else {
-    Product.findOneAndDelete({
-      id: req.params.id,
-    })
-      .select(["-_id"])
-      .then((product) => {
-        res.json(product);
-      })
-      .catch((err) => console.log(err));
-  }
+export const deleteProduct = async (req, res, next) => {
+    try {
+      const product = await Product.findByIdAndDelete(req.params.id);
+      console.log(product);
+      if (!product) throw new createError.NotFound();
+      res.status(200).send(product);
+    } catch (e) {
+      next(e);
+    }
 };

@@ -55,9 +55,9 @@ function Shop() {
         <div className="Cards-Container">
           {Array(9)
             .fill()
-            .map((item, id) => (
+            .map((item, _id) => (
               <CardSkeleton
-                key={id}
+                key={_id}
               />
             ))}
         </div>
@@ -65,11 +65,11 @@ function Shop() {
     if (hasErrors) return <p>Unable to display product.</p>;
     return (
       <div className="Cards-Container">
-        {data.map((item, id) => (
+        {data.map((item, _id) => (
           <ProductCard
-            key={id}
+            key={_id}
             product={item}
-            itemIndex={id}
+            itemIndex={_id}
             onAddToCart={handleAddToCart}
             onProductSelected={handleProductSelected}
           />

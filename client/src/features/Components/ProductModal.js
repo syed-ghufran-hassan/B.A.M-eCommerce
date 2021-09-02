@@ -50,7 +50,7 @@ function ProductModal(props) {
   return (
     <div
       className="lightbox-blanket"
-      style={{ display: props.product.id ? "block" : "none" }}
+      style={{ display: props.product._id ? "block" : "none" }}
     >
       <div className="pop-up-container">
         <div className="pop-up-container-vertical">

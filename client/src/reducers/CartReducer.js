@@ -15,7 +15,7 @@ function updateLocalStorage(data) {
 function CartReducer(state = initialState, action) {
     // function to check if the product is already exist in the state.data
     const productExist = (data, product) => {
-        return data.find((cartItem) => cartItem.product.id === product.id);
+        return data.find((cartItem) => cartItem.product._id === product._id);
     };
 
     switch (action.type) {
@@ -26,7 +26,7 @@ function CartReducer(state = initialState, action) {
                 // calculate cart
                 const newData = state.data.map((cartItem) => {
                     // find product from state.data with matching id
-                    if (cartItem.product.id === action.payload.product.id) {
+                    if (cartItem.product._id === action.payload.product._id) {
                         cartItem.quantity += action.payload.quantity;
 
                         // quantity in cart cant be lower than 0
@@ -67,7 +67,7 @@ function CartReducer(state = initialState, action) {
                 // calculate new cart data
                 const newData = state.data.filter(
                     (cartItem) =>
-                        cartItem.product.id !== action.payload.product.id,
+                        cartItem.product._id !== action.payload.product._id,
                 );
 
                 // storing into local storage
