@@ -23,6 +23,7 @@ function FormPage() {
     }).then(response => {
       if (response) {
         console.log("Email has been sent");
+        alert("Thank you. Your message has been sent")
         window.location.reload();
       } else {
         console.log("FAILURE");
