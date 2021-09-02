@@ -87,7 +87,7 @@ export const deleteProduct = (req, res) => {
       message: "cart id should be provided",
     });
   } else {
-    Product.findOne({
+    Product.findOneAndDelete({
       id: req.params.id,
     })
       .select(["-_id"])
