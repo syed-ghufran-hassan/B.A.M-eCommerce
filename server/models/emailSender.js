@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
 function sendEmail(contactName, email, message, callback) {
   const mailOption = {
     from: "fbw46-2@coding-school.org",
-    to: ["b.brisilda1552@gmail.com", "mlizamaoliger@gmail.com"],
+    to: ["b.brisilda1552@gmail.com", "mlizamaoliger@gmail.com", "volhvina@outlook.com"],
     subject: "Message from BAM CAT STORE",
     text: "\n" + "Contact Name:  " +  contactName + "\n" + "email:  " + email + "\n" + "Message: " + "\n" + message,
   };
