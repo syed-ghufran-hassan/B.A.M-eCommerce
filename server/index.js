@@ -4,11 +4,11 @@ import cors from "cors";
 import products from './routes/products.js';
 import users from './routes/users.js';
 import contact from './routes/contact.js';
-// import dotenv from "dotenv"
+import dotenv from "dotenv"
 
 const app = express();
 
-// dotenv.config()
+dotenv.config()
 
 app.use(express.json({limit: "30mb", extended: true}));
 app.use(express.urlencoded({limit: "30mb", extended: true}));
