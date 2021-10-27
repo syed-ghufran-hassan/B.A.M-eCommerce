@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "client-install": "npm install --prefix client",
-    "start": "nodemon index.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
@@ -22,7 +23,8 @@
     "http-errors": "^1.7.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.2",
-    "nodemailer": "^6.6.3"
+    "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.14"
   },
   "engines": {
     "node": "15.x"
