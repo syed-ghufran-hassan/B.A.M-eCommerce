@@ -11,7 +11,7 @@ function FormPage() {
 
     axios({
       method: "POST",
-      url: "http://localhost:5000/contact",
+      url: "/contact",
       headers: {
         'Content-Type': 'application/json'
       },
