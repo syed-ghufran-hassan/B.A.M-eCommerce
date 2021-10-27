@@ -22,9 +22,9 @@ app.use(express.urlencoded({limit: "30mb", extended: true}));
 
 app.use(cors());
 
-app.get("/", (req,res) => {
-  res.send("Hello World")
-})
+// app.get("/", (req,res) => {
+//   res.send("Hello World")
+// })
 app.use("/products", products);
 app.use("/users", users);
 app.use("/contact", contact);
