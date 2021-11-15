@@ -11,6 +11,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 96px;
 }
 
 .part-one-container {
@@ -41,20 +42,65 @@
 }
 
 .profile-btn {
-  background: linear-gradient(to right, #3c096c, #7b2cbf 50%, #3c096c 50%);
   width: 200px;
   height: 60px;
-  overflow: hidden;
-  background-size: 200% 100%;
-  background-position: 100%;
-  transition: background-position 275ms ease;
   text-shadow: 1px 1px 2px var(--color-accent-tint-grey-5) !important;
   text-transform: uppercase;
   cursor: pointer;
   font-weight: bold;
   font-size: 20px;
+  color: var(--color-light);
   text-decoration: none;
   font-family: "Source Sans Pro", sans-serif;
+  border: none;
+  overflow: hidden;
+  background: linear-gradient(to right, #3c096c, #7b2cbf 50%, #3c096c 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+}
+
+.input-field {
+  max-width: 380px;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+}
+
+.input-field input {
+  padding: 5px;
+}
+
+.input-field .regis-icon {
+  text-align: center;
+  line-height: 10px;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+.input-field input {
+  background: none;
+  cursor: pointer;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  color: var(--color-accent-tint-grey-5);
+  font-weight: 600;
+  border: 3px rgb(255, 255, 255) solid;
+  border-top-right-radius: 23px;
+  border-bottom-right-radius: 23px;
+  width: 103%;
 }
 
 .delete-btn {
@@ -75,9 +121,10 @@
 }
 
 .profile-btn:hover{
+  border: none;
   background-position: 0 100%;
   text-decoration: none;
-  color: var(--color-primary-tint-purple-0);
+  color: var(--color-light);
 }
 
 .profile-btn:active{

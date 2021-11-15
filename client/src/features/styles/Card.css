@@ -1,26 +1,29 @@
 .btn-card {
-  background: linear-gradient(to right, #3c096c, #7b2cbf 50%, #3c096c 50%);
-  width: 200px;
-  height: 60px;
-  border: none;
-  overflow: hidden;
-  background-size: 200% 100%;
-  background-position: 100%;
-  transition: background-position 275ms ease;
   text-shadow: 1px 1px 2px var(--color-accent-tint-grey-5) !important;
   text-transform: uppercase;
   cursor: pointer;
   font-weight: bold;
   font-size: 20px;
+  color: var(--color-light);
   text-decoration: none;
   font-family: "Source Sans Pro", sans-serif;
+  width: 250px;
+  height: 60px;
+  border: none;
+  overflow: hidden;
+  background: linear-gradient(to right, #3c096c, #7b2cbf 50%, #3c096c 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
 }
+
 .btn-card:hover {
+  border: none;
   background-position: 0 100%;
   text-decoration: none;
-  color: var(--color-primary-tint-purple-0);
+  color: var(--color-light);
 }
-.btn-card:active {
+.btn-card a:active {
   color: var(--color-accent-tint-orange-1) !important;
 }
 .btn-card:focus {

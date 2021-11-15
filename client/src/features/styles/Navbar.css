@@ -27,14 +27,14 @@
 .Social-links .facebook-icon,
 .Social-links .instagram-icon,
 .Social-links .youtube-icon {
-  background-color: var(--color-light);
+  background-color: var(--color-accent-tint-grey-2);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
 }
 
 .Social-links .facebook-icon svg {
@@ -50,7 +50,7 @@
 }
 
 .Social-links .shopping-icon {
-  height: 50px;
+  height: 40px;
   width: 70px;
   display: flex;
   flex-direction: row;

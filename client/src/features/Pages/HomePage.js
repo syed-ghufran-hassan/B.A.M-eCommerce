@@ -260,11 +260,11 @@ function HomePage() {
             </Card>
           </CardDeck>
           <div className="position-secondary-btn">
-            <Button className="secondary-btn">
+            <button className="secondary-btn">
               <NavLink className="home-shop" exact={true} to="/shop">
                 SHOP NOW
               </NavLink>
-            </Button>
+            </button>
           </div>
         </div>
         <div className="General-info">

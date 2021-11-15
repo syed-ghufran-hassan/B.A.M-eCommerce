@@ -46,14 +46,14 @@ function UserProfile() {
                         You are now part of us and we will always keep you up to
                         date with the latest fashion items!
                     </h4>
-                    <Button className="profile-btn">
+                    <button className="profile-btn">
                         <NavLink className="home-shop" exact={true} to="/shop">
                             CHECK MORE
                         </NavLink>
-                    </Button>
-                    <Button className="profile-btn" onClick={onLogOut}>
+                    </button>
+                    <button className="profile-btn" onClick={onLogOut}>
                         <Link to="">SIGN OUT</Link>
-                    </Button>
+                    </button>
                 </div>
                 <div className="form-container">
                     <form action="#" onSubmit={onUpdateSubmit}>
@@ -97,16 +97,16 @@ function UserProfile() {
                                 required
                             />
                         </div>
-                        <Button type="submit" className="profile-btn">
+                        <button type="submit" className="profile-btn">
                                 UPDATE
-                        </Button>
+                        </button>
                     </form>
                 </div>
             </div>
             <div>
-                <Button className="profile-btn delete-btn" onClick={onDeleteUserClickHandler}>
+                <button className="profile-btn delete-btn" onClick={onDeleteUserClickHandler}>
                     <Link to="">Delete my account</Link>
-                </Button>
+                </button>
             </div>
         </div>
     );

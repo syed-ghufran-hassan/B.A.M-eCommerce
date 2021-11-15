@@ -1,4 +1,8 @@
 
+.Title-Container{
+  margin-top: 96px;
+}
+
 .About-Container {
   display: flex;
   flex-direction: column;

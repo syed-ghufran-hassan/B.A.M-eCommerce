@@ -28,7 +28,7 @@ function NavbarFunc() {
 };
 
   return (
-    <Navbar sticky="top" collapseOnSelect expand="lg" variant="light">
+    <Navbar fixed="top" positionFixed collapseOnSelect expand="lg" variant="light">
       <Container>
         <Navbar.Brand href="./">
           <img className="logo" src={logo} alt=""></img>

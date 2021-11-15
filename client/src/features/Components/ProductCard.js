@@ -28,8 +28,8 @@ function ProductCard(props) {
       >
         <Card.Title>{props.product.title.slice(0, 35)}</Card.Title>
         <div>
-          <Button className="btn-card" onClick={handleOnClickDetails}>Details</Button>
-          <Button className="btn-card" onClick={handleOnClickAddToCart}>Add to Cart</Button>
+          <button className="btn-card" onClick={handleOnClickDetails}>Details</button>
+          <button className="btn-card" onClick={handleOnClickAddToCart}>Add to Cart</button>
         </div>
       </Card.Body>
     </Card>
