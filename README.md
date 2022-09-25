@@ -3,7 +3,7 @@ A project request from *DCI* to complete at the end of *SPA-Module* after learni
 
 The outcome was created from a group project and the collaborators are included in this repository.
 
-Demo : (https://brisilda-bushi.github.io/B.A.M-eCommerce/)
+Demo : (https://cat-bam.onrender.com)
 
 
 ## WHAT IS BAM-CAT? AND WHO ARE THE TEAM MEMBERS?
