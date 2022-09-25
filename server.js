@@ -34,7 +34,6 @@ app.use("/contact", contact);
 app.use(express.static('public'));  
 app.use('/images', express.static('images')); 
 
-// const CONNECTION_URL = "mongodb+srv://bam_user:bamenter1234@cluster0.ejkoy.mongodb.net/bam-project?retryWrites=true&w=majority"
 
 if (process.env.NODE_ENV === "production") {
   // Set static folder path
