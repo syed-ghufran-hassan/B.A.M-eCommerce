@@ -31,8 +31,8 @@ app.use("/contact", contact);
 
 // Function to serve all static files
 // inside public directory.
-// app.use(express.static('public'));  
-// app.use('/images', express.static('images')); 
+app.use(express.static('public'));  
+app.use('/images', express.static('images')); 
 
 
 if (process.env.NODE_ENV === "production") {
