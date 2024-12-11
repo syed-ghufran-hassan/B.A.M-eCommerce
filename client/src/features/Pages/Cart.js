@@ -11,28 +11,36 @@ import {
 import { FaCaretLeft, FaCaretRight, FaDollarSign, FaWindowClose } from "react-icons/fa";
 
 export default function Cart() {
-  const data = useSelector((state) => state.cart.data);
+  const data = useSelector((state) => state.cart.data || []); // Handle missing state
   const dispatch = useDispatch();
 
   const EmptyCart = () => {
     return <h2 className="Cart-Empty-Title">Your cart is empty right now</h2>;
   };
 
+  const handleQuantityChange = (item, value) => {
+    const quantity = parseInt(value, 10);
+    if (isNaN(quantity) || quantity <= 0) return; // Prevent invalid or negative inputs
+    dispatch(cartAddOrSubtractProduct(item.product, quantity - item.quantity));
+  };
+
   const FilledCart = () => {
     return (
       <div className="Products-Bag">
         {data.map((item, id) => (
-          <div className="Products-Grid">
+          <div className="Products-Grid" key={id}>
             <div>
-              <img className="Cart-Image" src={item.product.image} alt=""></img>
+              <img
+                className="Cart-Image"
+                src={item.product.image || ""}
+                alt={item.product.title || "Product Image"}
+              ></img>
             </div>
-            <div>
-              {item.product.title}
-            </div>
+            <div>{item.product.title || "Unnamed Product"}</div>
             <div>
               <div className="product-quantity cart-quantity-check">
                 <label
-                  htmlFor="product-quantity-input product-quantity-input"
+                  htmlFor="product-quantity-input"
                   className="product-quantity-label cart-quantity-label"
                 >
                   Quantity
@@ -41,7 +49,7 @@ export default function Cart() {
                   <i
                     className="FaCaretLeft quantity-left-btn-cart"
                     onClick={() =>
-                      dispatch(cartAddOrSubtractProduct(item.product, -1))
+                      item.quantity > 1 && dispatch(cartAddOrSubtractProduct(item.product, -1))
                     }
                   >
                     <FaCaretLeft size={28} />
@@ -52,16 +60,14 @@ export default function Cart() {
                     type="text"
                     id="product-quantity-input"
                     className="cart-quantity-input"
-                    onChange={() => { }}
+                    onChange={(e) => handleQuantityChange(item, e.target.value)}
                     value={item.quantity}
                   />
                 </div>
                 <div className="product-quantity-add cart-quantity-add">
                   <i
                     className="FaCaretRight quantity-right-btn-cart"
-                    onClick={() =>
-                      dispatch(cartAddOrSubtractProduct(item.product, 1))
-                    }
+                    onClick={() => dispatch(cartAddOrSubtractProduct(item.product, 1))}
                   >
                     <FaCaretRight size={28} />
                   </i>
@@ -69,7 +75,7 @@ export default function Cart() {
               </div>
             </div>
 
-            <div className="product-price ">
+            <div className="product-price">
               <FaDollarSign className="curency-prise" size={20} />
               {
                 Number(item.product.price * item.quantity)
@@ -91,7 +97,7 @@ export default function Cart() {
               className="close"
               onClick={() => dispatch(cartRemoveProduct(item.product))}
             >
-              <i className="FaChevronLeft close-icon ">
+              <i className="FaChevronLeft close-icon">
                 <FaWindowClose size={28} />
               </i>
             </div>
@@ -100,6 +106,13 @@ export default function Cart() {
       </div>
     );
   };
+
+  const totalAmount = data
+    .reduce(
+      (acc, current) => (acc += current.product.price * current.quantity),
+      0
+    )
+    .toFixed(2);
 
   return (
     <div className="Container">
@@ -116,21 +129,16 @@ export default function Cart() {
           <i className="FaDollarSign currency-total-icon">
             <FaDollarSign size={28} />
           </i>
-          <p className="Total-Cart-Amount">
-            {Number(
-              data
-                .reduce(
-                  (acc, current) =>
-                    (acc += current.product.price * current.quantity),
-                  0
-                )
-                .toFixed(2)
-            )}
-          </p>
+          <p className="Total-Cart-Amount">{totalAmount}</p>
         </div>
         <div className="Checkout-Button-Container">
-          <button onClick={() => dispatch(cartClear())}>Clear</button>
-          <button>Checkout</button>
+          <button
+            onClick={() => dispatch(cartClear())}
+            disabled={data.length === 0} // Disable when cart is empty
+          >
+            Clear
+          </button>
+          <button disabled={data.length === 0}>Checkout</button>
         </div>
       </div>
     </div>
